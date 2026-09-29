@@ -1,8 +1,16 @@
-# 🤖 Bot de survie ORB
+# 🤖 Bot de survie ORB — état au 29/09/2026 21:55 (Paris)
 
-Le bot n'a pas encore tourné. Ce tableau se mettra à jour tout seul après chaque journée de bourse.
+| | |
+|---|---|
+| Capital du bot (départ 50 $) | **50.00 $** |
+| Statut | ✅ EN VIE |
+| Jours de test | 0 |
+| Trades exécutés | 0 |
+| Gagnants | 0 % |
+| R moyen réel | +0.000 |
+| **Stoppés dans la minute d'entrée** | **0 %** (backtest : 13 % optimiste / 47 % pessimiste) |
+| Glissement moyen à l'entrée | +0.000 R |
 
-Capital de départ : **50 $ virtuels** · Compte Alpaca **PAPER** uniquement (aucun argent réel).
-
-- Journal détaillé : `JOURNAL.md`
-- Tous les trades : `trades.csv`
+Le test porte sur 2 semaines : trop peu de trades pour juger la rentabilité,
+mais assez pour savoir si le % « stoppés dans la minute d'entrée » est proche de 13 % ou de 47 %.
+Compte Alpaca PAPER uniquement — aucun argent réel.

@@ -1,0 +1,15 @@
+{
+ "equity": 50.0,
+ "alive": true,
+ "started": "2026-09-29",
+ "days": {
+  "2026-09-29": {
+   "picks": [],
+   "equity_start": 50.0,
+   "selected": true,
+   "skipped": true,
+   "final": true,
+   "pnl": 0.0
+  }
+ }
+}
