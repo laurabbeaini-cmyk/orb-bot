@@ -1,0 +1,46 @@
+name: Bot ORB (paper)
+
+# Heures en UTC. Deux créneaux par phase pour couvrir l'heure d'été ET l'heure d'hiver de New York :
+# le script regarde lui-même l'heure de New York et sait quoi faire.
+on:
+  schedule:
+    - cron: "14 13 * * 1-5"   # ≈ 9:14 NY (été)  → sélection 9:35 puis surveillance jusqu'à 12:45
+    - cron: "14 14 * * 1-5"   # ≈ 9:14 NY (hiver)
+    - cron: "41 16 * * 1-5"   # ≈ 12:41 NY (été) → surveillance jusqu'à 15:55, fermeture, journal
+    - cron: "41 17 * * 1-5"   # ≈ 12:41 NY (hiver)
+  workflow_dispatch: {}       # bouton « Run workflow » pour un lancement manuel
+
+concurrency:
+  group: orb-bot
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Installer
+        run: pip install -q alpaca-py pandas
+      - name: Lancer le bot
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+        run: python bot_live.py
+      - name: Enregistrer le journal
+        if: always()
+        run: |
+          git config user.name "orb-bot"
+          git config user.email "orb-bot@users.noreply.github.com"
+          git add state.json trades.csv JOURNAL.md README.md 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Journal $(date -u +%Y-%m-%d_%H%M)"
+            git pull --rebase
+            git push
+          fi
