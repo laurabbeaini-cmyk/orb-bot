@@ -10,6 +10,14 @@
    "skipped": true,
    "final": true,
    "pnl": 0.0
+  },
+  "2026-09-30": {
+   "picks": [],
+   "equity_start": 50.0,
+   "selected": true,
+   "skipped": true,
+   "final": true,
+   "pnl": 0.0
   }
  }
 }
