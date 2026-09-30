@@ -103,6 +103,12 @@ class Broker:
             symbol=sym, qty=qty, side=OrderSide.BUY if side == "buy" else OrderSide.SELL,
             time_in_force=TimeInForce.DAY, stop_price=stop_price, client_order_id=coid))
 
+    def market_buy(self, sym, qty, coid):
+        from alpaca.trading.enums import OrderSide, TimeInForce
+        from alpaca.trading.requests import MarketOrderRequest
+        return self.trading.submit_order(MarketOrderRequest(
+            symbol=sym, qty=qty, side=OrderSide.BUY, time_in_force=TimeInForce.DAY, client_order_id=coid))
+
     def market_sell(self, sym, qty, coid):
         from alpaca.trading.enums import OrderSide, TimeInForce
         from alpaca.trading.requests import MarketOrderRequest
@@ -189,9 +195,24 @@ def place_entries(broker, day, today):
         if cid in existing:
             continue
         try:
-            broker.stop_order(p["sym"], "buy", 1, p["trigger"], cid)
-            log(f"{p['sym']}: ordre d'achat stop à {p['trigger']} (stop prévu à −{p['stopdist']:.2f} $)")
+            px = broker.last_price(p["sym"])
+            if px >= p["trigger"]:
+                # cassure déjà faite : entrée immédiate au marché (comme l'entrée « gap » du backtest)
+                broker.market_buy(p["sym"], 1, cid)
+                p["market_entry"] = True
+                log(f"{p['sym']}: déjà au-dessus du déclencheur ({px:.2f} ≥ {p['trigger']}) → achat au marché")
+            else:
+                broker.stop_order(p["sym"], "buy", 1, p["trigger"], cid)
+                log(f"{p['sym']}: ordre d'achat stop à {p['trigger']} (stop prévu à −{p['stopdist']:.2f} $)")
         except Exception as e:
+            if "stop price must be greater" in str(e):
+                try:
+                    broker.market_buy(p["sym"], 1, cid)
+                    p["market_entry"] = True
+                    log(f"{p['sym']}: le prix a dépassé le déclencheur entre-temps → achat au marché")
+                    continue
+                except Exception as e2:
+                    e = e2
             log(f"{p['sym']}: ordre refusé ({e})")
             p["error"] = str(e)[:120]
 
@@ -356,7 +377,7 @@ def main(broker=None):
     today = now.date()
     if not st["alive"]:
         log("Le bot est mort (capital épuisé). Rien à faire."); return
-    if now.time() < time(8, 0) or now.time() > time(16, 10):
+    if now.time() < time(7, 0) or now.time() > time(16, 10):
         # lancement manuel hors séance = simple test de connexion, sans rien modifier
         if hasattr(broker, "trading"):
             acc = broker.trading.get_account()
@@ -387,8 +408,9 @@ def main(broker=None):
             place_entries(broker, day, today)
         save_state(st)
 
-    # 2) surveillance
-    while broker.now().time() < min(until, FLATTEN_AT):
+    # 2) surveillance (on s'arrête avant la limite de durée d'un job GitHub : 6 h)
+    deadline = now + timedelta(minutes=335)
+    while broker.now().time() < min(until, FLATTEN_AT) and broker.now() < deadline:
         try:
             manage(broker, day, today, st)
         except Exception as e:
@@ -401,6 +423,9 @@ def main(broker=None):
         flatten(broker, today)
         finalize(broker, day, today, st)
         log(f"Journée terminée. Capital du bot : {st['equity']:.2f} $")
+    elif broker.now().time() < FLATTEN_AT:
+        Path(".dispatch_next").write_text("1")   # le workflow relance aussitôt la phase suivante
+        log("Fin de cette phase → relance automatique de la phase suivante.")
     save_state(st)
 
 
