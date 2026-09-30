@@ -4,7 +4,12 @@ name: Bot ORB (paper)
 # le script regarde lui-même l'heure de New York et sait quoi faire.
 on:
   schedule:
-    - cron: "14 13 * * 1-5"   # ≈ 9:14 NY (été)  → sélection 9:35 puis surveillance jusqu'à 12:45
+    # Plusieurs créneaux le matin : GitHub retarde parfois les lancements planifiés.
+    # Le premier qui démarre attend 9:35 NY ; les suivants voient que la journée est déjà en cours.
+    - cron: "7 12 * * 1-5"    # ≈ 8:07 NY (été) / 7:07 NY (hiver)
+    - cron: "37 12 * * 1-5"
+    - cron: "7 13 * * 1-5"
+    - cron: "14 13 * * 1-5"   # ≈ 9:14 NY (été)
     - cron: "14 14 * * 1-5"   # ≈ 9:14 NY (hiver)
     - cron: "41 16 * * 1-5"   # ≈ 12:41 NY (été) → surveillance jusqu'à 15:55, fermeture, journal
     - cron: "41 17 * * 1-5"   # ≈ 12:41 NY (hiver)
@@ -16,11 +21,12 @@ concurrency:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 330
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -38,9 +44,17 @@ jobs:
         run: |
           git config user.name "orb-bot"
           git config user.email "orb-bot@users.noreply.github.com"
-          git add state.json trades.csv JOURNAL.md README.md 2>/dev/null || true
+          for f in state.json trades.csv JOURNAL.md README.md; do
+            if [ -f "$f" ]; then git add "$f"; fi
+          done
           if ! git diff --cached --quiet; then
             git commit -m "Journal $(date -u +%Y-%m-%d_%H%M)"
             git pull --rebase
             git push
           fi
+      - name: Relancer la phase suivante
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -f .dispatch_next ]; then gh workflow run bot.yml --ref main; fi
