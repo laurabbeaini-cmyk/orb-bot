@@ -329,9 +329,20 @@ def write_outputs(st, today, day, rows):
         for r in rows:
             w.writerow({k: r.get(k, "") for k in fields})
     done = [r for r in rows if r.get("R") is not None]
-    lines = [f"\n## {today:%A %d %B %Y}",
-             f"- Sélection : {', '.join(p['sym'] for p in day['picks']) or 'aucune action haussière dans le Top 5'}",
-             f"- Trades exécutés : {len(done)}"]
+    lines = [f"\n## {today:%A %d %B %Y}"]
+    if day.get("skipped"):
+        lines.append(f"- ⏭️ Journée sautée : {day.get('skip_reason', 'raison inconnue')}")
+    else:
+        top5 = ", ".join(f"{c['sym']} ({c['relvol']:.1f}x)" for c in day.get("top5", [])) or "aucune action éligible"
+        lines.append(f"- Top 5 à {day.get('selected_at', '?')} NY : {top5}")
+        lines.append(f"- Achats possibles (bougie haussière) : "
+                     f"{', '.join(p['sym'] for p in day['picks']) or 'aucun — pas de bougie haussière dans le Top 5'}")
+        for p in day["picks"]:
+            if p.get("error"):
+                lines.append(f"  - ⚠️ {p['sym']} : ordre refusé ({p['error']})")
+            elif p.get("market_entry"):
+                lines.append(f"  - {p['sym']} : cassure déjà faite → achat au marché")
+    lines.append(f"- Trades exécutés : {len(done)}")
     for r in done:
         lines.append(f"  - {r['sym']} : achat {r['entry']} à {r['t_entry']} → sortie {r['exit']} à {r['t_exit']} "
                      f"= **{r['R']:+.2f} R**{' (stoppé dans la minute d’entrée)' if r['stopped_same_minute'] else ''}")
@@ -395,8 +406,10 @@ def main(broker=None):
     # 1) sélection du matin
     if not day.get("selected"):
         if now.time() > LATEST_SELECT:
-            log("Trop tard pour sélectionner aujourd'hui (lancement retardé) → journée sautée.")
-            day.update(selected=True, skipped=True, picks=[])
+            reason = (f"le workflow GitHub n'a démarré qu'à {now:%H:%M} (heure de New York), "
+                      f"après l'heure limite de sélection ({LATEST_SELECT:%H:%M})")
+            log(f"Journée sautée : {reason}.")
+            day.update(selected=True, skipped=True, picks=[], skip_reason=reason)
         else:
             wait = (datetime.combine(today, SELECT_AT, tzinfo=NY) - broker.now()).total_seconds()
             if wait > 0:
