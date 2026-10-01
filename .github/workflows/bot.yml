@@ -1,16 +1,20 @@
 name: Bot ORB (paper)
 
-# Heures en UTC. Deux créneaux par phase pour couvrir l'heure d'été ET l'heure d'hiver de New York :
-# le script regarde lui-même l'heure de New York et sait quoi faire.
+# Heures en UTC. Le script regarde lui-même l'heure de New York et sait quoi faire.
 on:
   schedule:
-    # Plusieurs créneaux le matin : GitHub retarde parfois les lancements planifiés.
-    # Le premier qui démarre attend 9:35 NY ; les suivants voient que la journée est déjà en cours.
-    - cron: "7 12 * * 1-5"    # ≈ 8:07 NY (été) / 7:07 NY (hiver)
-    - cron: "37 12 * * 1-5"
-    - cron: "7 13 * * 1-5"
-    - cron: "14 13 * * 1-5"   # ≈ 9:14 NY (été)
-    - cron: "14 14 * * 1-5"   # ≈ 9:14 NY (hiver)
+    # Démarrage entre 8:00 et 9:30 (heure de New York), plusieurs créneaux car GitHub
+    # retarde parfois les lancements planifiés. Le premier qui démarre attend 9:35 NY ;
+    # les suivants voient que la journée est déjà en cours.
+    # Heure d'été NY (UTC-4) : 12:03 → 8:03 … 13:23 → 9:23 · heure d'hiver (UTC-5) : 13:03 → 8:03 … 14:23 → 9:23
+    - cron: "3 12 * * 1-5"
+    - cron: "23 12 * * 1-5"
+    - cron: "43 12 * * 1-5"
+    - cron: "3 13 * * 1-5"
+    - cron: "23 13 * * 1-5"
+    - cron: "43 13 * * 1-5"
+    - cron: "3 14 * * 1-5"
+    - cron: "23 14 * * 1-5"
     - cron: "41 16 * * 1-5"   # ≈ 12:41 NY (été) → surveillance jusqu'à 15:55, fermeture, journal
     - cron: "41 17 * * 1-5"   # ≈ 12:41 NY (hiver)
   workflow_dispatch: {}       # bouton « Run workflow » pour un lancement manuel
