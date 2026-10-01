@@ -18,6 +18,15 @@
    "skipped": true,
    "final": true,
    "pnl": 0.0
+  },
+  "2026-10-01": {
+   "picks": [],
+   "equity_start": 50.0,
+   "selected": true,
+   "skipped": true,
+   "skip_reason": "le workflow GitHub n'a d\u00e9marr\u00e9 qu'\u00e0 14:12 (heure de New York), apr\u00e8s l'heure limite de s\u00e9lection (10:30)",
+   "final": true,
+   "pnl": 0.0
   }
  }
 }
