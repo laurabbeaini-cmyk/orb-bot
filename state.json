@@ -27,6 +27,51 @@
    "skip_reason": "le workflow GitHub n'a d\u00e9marr\u00e9 qu'\u00e0 14:12 (heure de New York), apr\u00e8s l'heure limite de s\u00e9lection (10:30)",
    "final": true,
    "pnl": 0.0
+  },
+  "2026-10-02": {
+   "picks": [
+    {
+     "sym": "NKE",
+     "trigger": 33.07,
+     "stopdist": 0.0963,
+     "relvol": 8.46,
+     "atr": 0.963,
+     "stop_placed": true
+    },
+    {
+     "sym": "RIOT",
+     "trigger": 20.61,
+     "stopdist": 0.1447,
+     "relvol": 3.64,
+     "atr": 1.447,
+     "stop_placed": true
+    }
+   ],
+   "equity_start": 50.0,
+   "selected": true,
+   "selected_at": "09:36:21",
+   "top5": [
+    {
+     "sym": "NKE",
+     "relvol": 8.46290401266307
+    },
+    {
+     "sym": "RIOT",
+     "relvol": 3.6381559238212984
+    },
+    {
+     "sym": "RIVN",
+     "relvol": 3.425817229546686
+    },
+    {
+     "sym": "WMT",
+     "relvol": 2.9928238212900014
+    },
+    {
+     "sym": "GM",
+     "relvol": 2.4768804433887572
+    }
+   ]
   }
  }
 }
