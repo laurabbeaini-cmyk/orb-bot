@@ -1,5 +1,5 @@
 {
- "equity": 50.0,
+ "equity": 49.8831,
  "alive": true,
  "started": "2026-09-29",
  "days": {
@@ -71,7 +71,9 @@
      "sym": "GM",
      "relvol": 2.4768804433887572
     }
-   ]
+   ],
+   "final": true,
+   "pnl": -0.1169
   }
  }
 }
