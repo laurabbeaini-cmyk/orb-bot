@@ -21,3 +21,10 @@
   - NKE : achat 33.08 à 09:36:35 → sortie 32.95 à 09:37:19 = **-1.35 R**
   - RIOT : achat 20.62 à 09:36:37 → sortie 20.46 à 10:53:14 = **-1.11 R**
 - Résultat du jour : -0.12 $ → capital du bot : **49.88 $** (EN VIE)
+
+## Monday 05 October 2026
+- Top 5 à 09:36:04 NY : SPOT (5.6x), UBER (3.4x), BMY (2.7x), LRCX (2.7x), BAC (2.6x)
+- Achats possibles (bougie haussière) : UBER, BMY, LRCX
+- Trades exécutés : 1
+  - UBER : achat 69.64 à 10:09:59 → sortie 69.49 à 10:14:30 = **-1.04 R**
+- Résultat du jour : -0.02 $ → capital du bot : **49.86 $** (EN VIE)
