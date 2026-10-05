@@ -74,6 +74,57 @@
    ],
    "final": true,
    "pnl": -0.1169
+  },
+  "2026-10-05": {
+   "picks": [
+    {
+     "sym": "UBER",
+     "trigger": 69.62,
+     "stopdist": 0.1443,
+     "relvol": 3.44,
+     "atr": 1.443,
+     "stop_placed": true
+    },
+    {
+     "sym": "BMY",
+     "trigger": 60.13,
+     "stopdist": 0.1305,
+     "relvol": 2.74,
+     "atr": 1.305
+    },
+    {
+     "sym": "LRCX",
+     "trigger": 351.37,
+     "stopdist": 1.2905,
+     "relvol": 2.66,
+     "atr": 12.905
+    }
+   ],
+   "equity_start": 49.8831,
+   "selected": true,
+   "selected_at": "09:36:04",
+   "top5": [
+    {
+     "sym": "SPOT",
+     "relvol": 5.614335719136931
+    },
+    {
+     "sym": "UBER",
+     "relvol": 3.443421662133432
+    },
+    {
+     "sym": "BMY",
+     "relvol": 2.7350786440143895
+    },
+    {
+     "sym": "LRCX",
+     "relvol": 2.6640872919006005
+    },
+    {
+     "sym": "BAC",
+     "relvol": 2.60602273825244
+    }
+   ]
   }
  }
 }
