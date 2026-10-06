@@ -28,3 +28,14 @@
 - Trades exécutés : 1
   - UBER : achat 69.64 à 10:09:59 → sortie 69.49 à 10:14:30 = **-1.04 R**
 - Résultat du jour : -0.02 $ → capital du bot : **49.86 $** (EN VIE)
+
+## Tuesday 06 October 2026
+- Top 5 à 09:36:25 NY : MRVL (6.5x), U (6.2x), DAL (2.6x), CVS (2.5x), MS (2.3x)
+- Achats possibles (bougie haussière) : MRVL, DAL, MS
+  - MRVL : cassure déjà faite → achat au marché
+  - DAL : cassure déjà faite → achat au marché
+- Trades exécutés : 3
+  - MRVL : achat 287.91 à 09:36:26 → sortie 286.33 à 09:49:59 = **-1.32 R**
+  - DAL : achat 85.25 à 09:36:26 → sortie 84.94 à 09:46:33 = **-1.26 R**
+  - MS : achat 192.4 à 09:36:27 → sortie 191.78 à 09:37:28 = **-1.40 R**
+- Résultat du jour : -0.12 $ → capital du bot : **49.74 $** (EN VIE)
