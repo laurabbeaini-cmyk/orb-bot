@@ -127,6 +127,61 @@
    ],
    "final": true,
    "pnl": -0.0215
+  },
+  "2026-10-06": {
+   "picks": [
+    {
+     "sym": "MRVL",
+     "trigger": 287.36,
+     "stopdist": 1.1971,
+     "relvol": 6.51,
+     "atr": 11.971,
+     "market_entry": true,
+     "stop_placed": true
+    },
+    {
+     "sym": "DAL",
+     "trigger": 85.17,
+     "stopdist": 0.2469,
+     "relvol": 2.64,
+     "atr": 2.469,
+     "market_entry": true,
+     "stop_placed": true
+    },
+    {
+     "sym": "MS",
+     "trigger": 192.33,
+     "stopdist": 0.442,
+     "relvol": 2.35,
+     "atr": 4.42,
+     "stop_placed": true
+    }
+   ],
+   "equity_start": 49.8616,
+   "selected": true,
+   "selected_at": "09:36:25",
+   "top5": [
+    {
+     "sym": "MRVL",
+     "relvol": 6.512319114997533
+    },
+    {
+     "sym": "U",
+     "relvol": 6.219262624828435
+    },
+    {
+     "sym": "DAL",
+     "relvol": 2.64238808532555
+    },
+    {
+     "sym": "CVS",
+     "relvol": 2.4553217662456555
+    },
+    {
+     "sym": "MS",
+     "relvol": 2.346170577548044
+    }
+   ]
   }
  }
 }
