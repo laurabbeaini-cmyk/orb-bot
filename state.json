@@ -184,6 +184,52 @@
    ],
    "final": true,
    "pnl": -0.1231
+  },
+  "2026-10-07": {
+   "picks": [
+    {
+     "sym": "LRCX",
+     "trigger": 325.08,
+     "stopdist": 1.2939,
+     "relvol": 2.57,
+     "atr": 12.939,
+     "stop_placed": true
+    },
+    {
+     "sym": "RBLX",
+     "trigger": 45.5,
+     "stopdist": 0.2425,
+     "relvol": 2.45,
+     "atr": 2.425,
+     "market_entry": true,
+     "stop_placed": true
+    }
+   ],
+   "equity_start": 49.7385,
+   "selected": true,
+   "selected_at": "09:36:18",
+   "top5": [
+    {
+     "sym": "U",
+     "relvol": 2.9370030004978407
+    },
+    {
+     "sym": "TGT",
+     "relvol": 2.766536585365854
+    },
+    {
+     "sym": "BMY",
+     "relvol": 2.596848681187182
+    },
+    {
+     "sym": "LRCX",
+     "relvol": 2.569137916455268
+    },
+    {
+     "sym": "RBLX",
+     "relvol": 2.447318786816959
+    }
+   ]
   }
  }
 }
