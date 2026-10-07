@@ -39,3 +39,12 @@
   - DAL : achat 85.25 à 09:36:26 → sortie 84.94 à 09:46:33 = **-1.26 R**
   - MS : achat 192.4 à 09:36:27 → sortie 191.78 à 09:37:28 = **-1.40 R**
 - Résultat du jour : -0.12 $ → capital du bot : **49.74 $** (EN VIE)
+
+## Wednesday 07 October 2026
+- Top 5 à 09:36:18 NY : U (2.9x), TGT (2.8x), BMY (2.6x), LRCX (2.6x), RBLX (2.4x)
+- Achats possibles (bougie haussière) : LRCX, RBLX
+  - RBLX : cassure déjà faite → achat au marché
+- Trades exécutés : 2
+  - LRCX : achat 325.36 à 09:45:29 → sortie 323.71 à 09:46:12 = **-1.27 R**
+  - RBLX : achat 45.7 à 09:36:19 → sortie 45.66 à 09:36:29 = **-0.17 R** (stoppé dans la minute d’entrée)
+- Résultat du jour : -0.06 $ → capital du bot : **49.68 $** (EN VIE)

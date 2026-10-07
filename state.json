@@ -1,5 +1,5 @@
 {
- "equity": 49.7385,
+ "equity": 49.6793,
  "alive": true,
  "started": "2026-09-29",
  "days": {
@@ -229,7 +229,9 @@
      "sym": "RBLX",
      "relvol": 2.447318786816959
     }
-   ]
+   ],
+   "final": true,
+   "pnl": -0.0592
   }
  }
 }
