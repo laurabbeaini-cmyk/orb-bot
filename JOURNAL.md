@@ -48,3 +48,11 @@
   - LRCX : achat 325.36 à 09:45:29 → sortie 323.71 à 09:46:12 = **-1.27 R**
   - RBLX : achat 45.7 à 09:36:19 → sortie 45.66 à 09:36:29 = **-0.17 R** (stoppé dans la minute d’entrée)
 - Résultat du jour : -0.06 $ → capital du bot : **49.68 $** (EN VIE)
+
+## Thursday 08 October 2026
+- Top 5 à 09:36:29 NY : AA (9.9x), DVN (5.0x), ENPH (3.5x), XOM (3.5x), PLTR (3.1x)
+- Achats possibles (bougie haussière) : AA, XOM, PLTR
+  - XOM : cassure déjà faite → achat au marché
+- Trades exécutés : 1
+  - XOM : achat 168.57 à 09:36:30 → sortie 168.09 à 09:37:17 = **-1.44 R**
+- Résultat du jour : -0.03 $ → capital du bot : **49.65 $** (EN VIE)

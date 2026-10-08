@@ -1,5 +1,5 @@
 {
- "equity": 49.6793,
+ "equity": 49.651,
  "alive": true,
  "started": "2026-09-29",
  "days": {
@@ -284,7 +284,9 @@
      "sym": "PLTR",
      "relvol": 3.112798198504271
     }
-   ]
+   ],
+   "final": true,
+   "pnl": -0.0283
   }
  }
 }
