@@ -41,6 +41,7 @@ START_CAPITAL, DAILY_STOP, DEATH = 50.0, 0.05, 0.50
 SELECT_AT, LATEST_SELECT = time(9, 35, 20), time(10, 30)
 PHASE_A_END, FLATTEN_AT = time(12, 45), time(15, 55)
 POLL = 10  # secondes
+FILL_WAIT_STEP, FILL_WAIT_MAX = 5, 30  # vérification des ventes : toutes les 5 s, 30 s maximum
 STATE, TRADES, JOURNAL, STATUS = Path("state.json"), Path("trades.csv"), Path("JOURNAL.md"), Path("README.md")
 
 
@@ -114,6 +115,16 @@ class Broker:
         from alpaca.trading.requests import MarketOrderRequest
         return self.trading.submit_order(MarketOrderRequest(
             symbol=sym, qty=qty, side=OrderSide.SELL, time_in_force=TimeInForce.DAY, client_order_id=coid))
+
+    def get_order(self, order_id):
+        return self.trading.get_order_by_id(order_id)
+
+    def closed_orders_today(self, sym):
+        from alpaca.trading.enums import QueryOrderStatus
+        from alpaca.trading.requests import GetOrdersRequest
+        after = datetime.combine(self.now().date(), time(4, 0), tzinfo=NY)
+        return self.trading.get_orders(GetOrdersRequest(status=QueryOrderStatus.CLOSED, after=after,
+                                                        symbols=[sym], limit=500))
 
     def cancel(self, order_id):
         self.trading.cancel_order_by_id(order_id)
@@ -268,10 +279,58 @@ def flatten(broker, today):
             except Exception as e:
                 log(f"annulation impossible {o.client_order_id}: {e}")
     systime.sleep(3)
+    sent = []  # (symbole, identifiant de l'ordre de vente) pour vérifier l'exécution ensuite
     for sym, qty in broker.positions().items():
         if qty > 0:
-            broker.market_sell(sym, qty, coid(today, sym, f"X{int(systime.time()) % 100000}"))
+            o = broker.market_sell(sym, qty, coid(today, sym, f"X{int(systime.time()) % 100000}"))
             log(f"{sym}: fermeture de fin de journée ({qty} action)")
+            sent.append((sym, str(getattr(o, "id", "") or "?")))
+    return sent
+
+
+# ============================================================== vérification des sorties (lecture seule)
+def _status(o):
+    return str(o.status).split(".")[-1].lower()
+
+
+def wait_for_fill(broker, order_id):
+    """Interroge Alpaca toutes les 5 s, 30 s au maximum, jusqu'à ce que l'ordre soit « filled »."""
+    deadline = systime.monotonic() + FILL_WAIT_MAX
+    while True:
+        try:
+            o = broker.get_order(order_id)
+            if _status(o) == "filled" and o.filled_avg_price:
+                return o
+        except Exception as e:
+            log(f"ordre {order_id} pas encore lisible ({e})")
+        if systime.monotonic() + FILL_WAIT_STEP > deadline:
+            return None
+        systime.sleep(FILL_WAIT_STEP)
+
+
+def confirm_exit(broker, today, sym, order_id):
+    """Ne passe AUCUN ordre : vérifie seulement que la vente est bien exécutée. Renvoie True si trouvée."""
+    if wait_for_fill(broker, order_id) is not None:
+        return True
+    log(f"{sym}: vente {order_id} non confirmée après {FILL_WAIT_MAX} s → 2e recherche")
+    found, still_open = False, None
+    try:
+        found = any(o.client_order_id and o.client_order_id.startswith(f"orb-{today:%Y%m%d}-{sym}-")
+                    and not o.client_order_id.endswith("-E") and _status(o) == "filled" and o.filled_avg_price
+                    for o in broker.closed_orders_today(sym))
+    except Exception as e:
+        log(f"{sym}: lecture des ordres fermés impossible ({e})")
+    try:
+        still_open = broker.positions().get(sym, 0) > 0
+    except Exception as e:
+        log(f"{sym}: lecture des positions impossible ({e})")
+    if still_open:
+        log(f"{sym}: ⚠️ une position reste ouverte sur ce symbole (ordre {order_id}) → à vérifier à la main")
+    if found:
+        log(f"{sym}: vente retrouvée dans les ordres fermés du jour")
+        return True
+    log(f"{sym}: sortie introuvable (ordre {order_id}) → à vérifier à la main dans Alpaca")
+    return False
 
 
 def virtual_shares(equity, entry, stopdist):
@@ -279,8 +338,13 @@ def virtual_shares(equity, entry, stopdist):
 
 
 # ============================================================== fin de journée : calcul & journal
-def finalize(broker, day, today, st):
-    systime.sleep(5)
+def finalize(broker, day, today, st, exit_orders=()):
+    missing = {}
+    for sym, oid in exit_orders:            # remplace l'ancienne attente fixe de 5 s
+        if not confirm_exit(broker, today, sym, oid):
+            missing[sym] = oid
+    if missing:
+        day["missing_exits"] = missing
     orders = [o for o in broker.orders_today() if o.client_order_id and
               o.client_order_id.startswith(f"orb-{today:%Y%m%d}")]
     eq0 = day["equity_start"]
@@ -294,7 +358,9 @@ def finalize(broker, day, today, st):
         sells = sorted([o for o in mine if o.client_order_id.split("-")[-1] != "E" and o.filled_avg_price],
                        key=lambda o: o.filled_at)
         if not sells:
-            rows.append(dict(date=today, sym=p["sym"], triggered=True, note="sortie introuvable"))
+            oid = missing.get(p["sym"], "inconnu")
+            log(f"{p['sym']}: sortie introuvable (ordre {oid}) → trade non compté, à vérifier à la main")
+            rows.append(dict(date=today, sym=p["sym"], triggered=True, note=f"sortie introuvable (ordre {oid})"))
             continue
         x = sells[-1]
         entry, exit_ = float(e.filled_avg_price), float(x.filled_avg_price)
@@ -346,6 +412,9 @@ def write_outputs(st, today, day, rows):
     for r in done:
         lines.append(f"  - {r['sym']} : achat {r['entry']} à {r['t_entry']} → sortie {r['exit']} à {r['t_exit']} "
                      f"= **{r['R']:+.2f} R**{' (stoppé dans la minute d’entrée)' if r['stopped_same_minute'] else ''}")
+    for r in rows:
+        if str(r.get("note", "")).startswith("sortie introuvable"):
+            lines.append(f"  - ⚠️ {r['sym']} : {r['note']} → à vérifier à la main dans Alpaca")
     if day.get("daily_stop"):
         lines.append("- ⚠️ Arrêt journalier −5 % déclenché")
     lines.append(f"- Résultat du jour : {day['pnl']:+.2f} $ → capital du bot : **{st['equity']:.2f} $** "
@@ -433,8 +502,8 @@ def main(broker=None):
 
     # 3) fin de journée
     if broker.now().time() >= FLATTEN_AT:
-        flatten(broker, today)
-        finalize(broker, day, today, st)
+        exits = flatten(broker, today)
+        finalize(broker, day, today, st, exits)
         log(f"Journée terminée. Capital du bot : {st['equity']:.2f} $")
     elif broker.now().time() < FLATTEN_AT:
         Path(".dispatch_next").write_text("1")   # le workflow relance aussitôt la phase suivante
