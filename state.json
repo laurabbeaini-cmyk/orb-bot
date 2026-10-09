@@ -287,6 +287,70 @@
    ],
    "final": true,
    "pnl": -0.0283
+  },
+  "2026-10-09": {
+   "picks": [
+    {
+     "sym": "DIS",
+     "trigger": 107.5,
+     "stopdist": 0.2027,
+     "relvol": 6.91,
+     "atr": 2.027,
+     "market_entry": true,
+     "stop_placed": true
+    },
+    {
+     "sym": "AAPL",
+     "trigger": 333.55,
+     "stopdist": 0.6235,
+     "relvol": 5.61,
+     "atr": 6.235,
+     "stop_placed": true
+    },
+    {
+     "sym": "CVS",
+     "trigger": 88.32,
+     "stopdist": 0.2036,
+     "relvol": 5.51,
+     "atr": 2.036,
+     "market_entry": true,
+     "stop_placed": true
+    },
+    {
+     "sym": "UNH",
+     "trigger": 378.9,
+     "stopdist": 0.8048,
+     "relvol": 5.39,
+     "atr": 8.048,
+     "market_entry": true,
+     "stop_placed": true
+    }
+   ],
+   "equity_start": 49.651,
+   "selected": true,
+   "selected_at": "09:36:40",
+   "top5": [
+    {
+     "sym": "VZ",
+     "relvol": 18.712271723509414
+    },
+    {
+     "sym": "DIS",
+     "relvol": 6.908208838091976
+    },
+    {
+     "sym": "AAPL",
+     "relvol": 5.610165636117921
+    },
+    {
+     "sym": "CVS",
+     "relvol": 5.514744356651723
+    },
+    {
+     "sym": "UNH",
+     "relvol": 5.388294133991469
+    }
+   ]
   }
  }
 }
