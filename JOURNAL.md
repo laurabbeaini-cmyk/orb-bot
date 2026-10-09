@@ -56,3 +56,16 @@
 - Trades exécutés : 1
   - XOM : achat 168.57 à 09:36:30 → sortie 168.09 à 09:37:17 = **-1.44 R**
 - Résultat du jour : -0.03 $ → capital du bot : **49.65 $** (EN VIE)
+
+## Friday 09 October 2026
+- Top 5 à 09:36:40 NY : VZ (18.7x), DIS (6.9x), AAPL (5.6x), CVS (5.5x), UNH (5.4x)
+- Achats possibles (bougie haussière) : DIS, AAPL, CVS, UNH
+  - DIS : cassure déjà faite → achat au marché
+  - CVS : cassure déjà faite → achat au marché
+  - UNH : cassure déjà faite → achat au marché
+- Trades exécutés : 4
+  - DIS : achat 107.71 à 09:36:42 → sortie 107.38 à 09:39:42 = **-1.63 R**
+  - AAPL : achat 333.57 à 09:46:42 → sortie 332.88 à 09:47:18 = **-1.11 R**
+  - CVS : achat 88.32 à 09:36:42 → sortie 87.92 à 09:42:58 = **-1.97 R**
+  - UNH : achat 381.27 à 09:36:42 → sortie 380.35 à 09:37:01 = **-1.14 R**
+- Résultat du jour : -0.12 $ → capital du bot : **49.53 $** (EN VIE)

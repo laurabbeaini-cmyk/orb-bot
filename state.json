@@ -1,5 +1,5 @@
 {
- "equity": 49.651,
+ "equity": 49.5311,
  "alive": true,
  "started": "2026-09-29",
  "days": {
@@ -350,7 +350,9 @@
      "sym": "UNH",
      "relvol": 5.388294133991469
     }
-   ]
+   ],
+   "final": true,
+   "pnl": -0.1199
   }
  }
 }
