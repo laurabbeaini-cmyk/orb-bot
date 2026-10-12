@@ -69,3 +69,12 @@
   - CVS : achat 88.32 à 09:36:42 → sortie 87.92 à 09:42:58 = **-1.97 R**
   - UNH : achat 381.27 à 09:36:42 → sortie 380.35 à 09:37:01 = **-1.14 R**
 - Résultat du jour : -0.12 $ → capital du bot : **49.53 $** (EN VIE)
+
+## Monday 12 October 2026
+- Top 5 à 09:36:23 NY : LOW (4.8x), TGT (4.1x), FSLR (3.7x), BMY (3.6x), UNH (3.4x)
+- Achats possibles (bougie haussière) : LOW, FSLR, BMY
+  - FSLR : cassure déjà faite → achat au marché
+- Trades exécutés : 2
+  - LOW : achat 186.78 à 10:55:56 → sortie 186.29 à 10:58:05 = **-1.06 R**
+  - FSLR : achat 183.48 à 09:36:25 → sortie 181.68 à 09:40:59 = **-2.60 R**
+- Résultat du jour : -0.12 $ → capital du bot : **49.41 $** (EN VIE)
