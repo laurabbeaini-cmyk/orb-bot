@@ -353,6 +353,59 @@
    ],
    "final": true,
    "pnl": -0.1199
+  },
+  "2026-10-12": {
+   "picks": [
+    {
+     "sym": "LOW",
+     "trigger": 186.61,
+     "stopdist": 0.462,
+     "relvol": 4.85,
+     "atr": 4.62,
+     "stop_placed": true
+    },
+    {
+     "sym": "FSLR",
+     "trigger": 183.15,
+     "stopdist": 0.6919,
+     "relvol": 3.68,
+     "atr": 6.919,
+     "market_entry": true,
+     "stop_placed": true
+    },
+    {
+     "sym": "BMY",
+     "trigger": 60.64,
+     "stopdist": 0.1416,
+     "relvol": 3.64,
+     "atr": 1.416
+    }
+   ],
+   "equity_start": 49.5311,
+   "selected": true,
+   "selected_at": "09:36:23",
+   "top5": [
+    {
+     "sym": "LOW",
+     "relvol": 4.845984251968504
+    },
+    {
+     "sym": "TGT",
+     "relvol": 4.145778489143483
+    },
+    {
+     "sym": "FSLR",
+     "relvol": 3.677839245037423
+    },
+    {
+     "sym": "BMY",
+     "relvol": 3.6404403555178497
+    },
+    {
+     "sym": "UNH",
+     "relvol": 3.421006569945887
+    }
+   ]
   }
  }
 }
