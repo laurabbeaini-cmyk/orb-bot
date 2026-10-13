@@ -78,3 +78,9 @@
   - LOW : achat 186.78 à 10:55:56 → sortie 186.29 à 10:58:05 = **-1.06 R**
   - FSLR : achat 183.48 à 09:36:25 → sortie 181.68 à 09:40:59 = **-2.60 R**
 - Résultat du jour : -0.12 $ → capital du bot : **49.41 $** (EN VIE)
+
+## Tuesday 13 October 2026
+- Top 5 à 09:36:08 NY : JPM (4.8x), WFC (4.3x), UNH (4.3x), JNJ (4.2x), GS (4.0x)
+- Achats possibles (bougie haussière) : JPM, WFC
+- Trades exécutés : 0
+- Résultat du jour : +0.00 $ → capital du bot : **49.41 $** (EN VIE)

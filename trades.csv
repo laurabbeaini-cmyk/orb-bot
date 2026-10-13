@@ -19,3 +19,5 @@ date,sym,triggered,trigger,entry,exit,t_entry,t_exit,stopdist,R,stopped,stopped_
 2026-10-12,LOW,True,186.61,186.78,186.29,10:55:56,10:58:05,0.462,-1.061,True,False,0.368,0.05304,-0.026,
 2026-10-12,FSLR,True,183.15,183.48,181.68,09:36:25,09:40:59,0.6919,-2.602,True,False,0.477,0.05399,-0.0972,
 2026-10-12,BMY,False,,,,,,,,,,,,,
+2026-10-13,JPM,False,,,,,,,,,,,,,
+2026-10-13,WFC,False,,,,,,,,,,,,,
