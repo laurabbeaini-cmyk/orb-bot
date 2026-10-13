@@ -408,6 +408,49 @@
    ],
    "final": true,
    "pnl": -0.1232
+  },
+  "2026-10-13": {
+   "picks": [
+    {
+     "sym": "JPM",
+     "trigger": 344.28,
+     "stopdist": 0.491,
+     "relvol": 4.81,
+     "atr": 4.91
+    },
+    {
+     "sym": "WFC",
+     "trigger": 83.37,
+     "stopdist": 0.1713,
+     "relvol": 4.34,
+     "atr": 1.713
+    }
+   ],
+   "equity_start": 49.4079,
+   "selected": true,
+   "selected_at": "09:36:08",
+   "top5": [
+    {
+     "sym": "JPM",
+     "relvol": 4.8119343923195395
+    },
+    {
+     "sym": "WFC",
+     "relvol": 4.336766461171202
+    },
+    {
+     "sym": "UNH",
+     "relvol": 4.292697571378289
+    },
+    {
+     "sym": "JNJ",
+     "relvol": 4.21102612303105
+    },
+    {
+     "sym": "GS",
+     "relvol": 3.996069761729305
+    }
+   ]
   }
  }
 }
