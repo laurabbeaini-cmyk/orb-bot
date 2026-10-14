@@ -1,5 +1,5 @@
 {
- "equity": 49.4079,
+ "equity": 49.4874,
  "alive": true,
  "started": "2026-09-29",
  "days": {
@@ -514,7 +514,9 @@
      "sym": "WFC",
      "relvol": 3.1549428179646304
     }
-   ]
+   ],
+   "final": true,
+   "pnl": 0.0795
   }
  }
 }

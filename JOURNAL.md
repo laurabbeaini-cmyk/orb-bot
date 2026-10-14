@@ -84,3 +84,14 @@
 - Achats possibles (bougie haussière) : JPM, WFC
 - Trades exécutés : 0
 - Résultat du jour : +0.00 $ → capital du bot : **49.41 $** (EN VIE)
+
+## Wednesday 14 October 2026
+- Top 5 à 09:36:22 NY : MS (7.0x), PANW (4.6x), JNJ (4.0x), BAC (3.9x), WFC (3.2x)
+- Achats possibles (bougie haussière) : MS, JNJ, BAC, WFC
+  - MS : cassure déjà faite → achat au marché
+- Trades exécutés : 4
+  - MS : achat 183.5 à 09:36:29 → sortie 182.83 à 09:36:50 = **-1.65 R** (stoppé dans la minute d’entrée)
+  - JNJ : achat 250.48 à 09:37:21 → sortie 249.69 à 09:43:02 = **-1.31 R**
+  - BAC : achat 50.49 à 11:34:44 → sortie 51.36 à 15:55:41 = **+9.13 R**
+  - WFC : achat 79.96 à 12:00:40 → sortie 79.77 à 13:05:18 = **-1.04 R**
+- Résultat du jour : +0.08 $ → capital du bot : **49.49 $** (EN VIE)
