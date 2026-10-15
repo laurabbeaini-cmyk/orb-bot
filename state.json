@@ -517,6 +517,61 @@
    ],
    "final": true,
    "pnl": 0.0795
+  },
+  "2026-10-15": {
+   "picks": [
+    {
+     "sym": "NFLX",
+     "trigger": 72.2,
+     "stopdist": 0.153,
+     "relvol": 6.23,
+     "atr": 1.53,
+     "market_entry": true,
+     "stop_placed": true
+    },
+    {
+     "sym": "WMT",
+     "trigger": 121.08,
+     "stopdist": 0.2322,
+     "relvol": 4.69,
+     "atr": 2.322,
+     "market_entry": true,
+     "stop_placed": true
+    },
+    {
+     "sym": "SHOP",
+     "trigger": 168.68,
+     "stopdist": 0.6437,
+     "relvol": 4.67,
+     "atr": 6.437,
+     "stop_placed": true
+    }
+   ],
+   "equity_start": 49.4874,
+   "selected": true,
+   "selected_at": "09:36:24",
+   "top5": [
+    {
+     "sym": "NFLX",
+     "relvol": 6.230625814033274
+    },
+    {
+     "sym": "CAT",
+     "relvol": 6.070550931430836
+    },
+    {
+     "sym": "SCHW",
+     "relvol": 6.032879673478676
+    },
+    {
+     "sym": "WMT",
+     "relvol": 4.6938999451344205
+    },
+    {
+     "sym": "SHOP",
+     "relvol": 4.669284061721235
+    }
+   ]
   }
  }
 }
