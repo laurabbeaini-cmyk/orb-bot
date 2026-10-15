@@ -95,3 +95,14 @@
   - BAC : achat 50.49 à 11:34:44 → sortie 51.36 à 15:55:41 = **+9.13 R**
   - WFC : achat 79.96 à 12:00:40 → sortie 79.77 à 13:05:18 = **-1.04 R**
 - Résultat du jour : +0.08 $ → capital du bot : **49.49 $** (EN VIE)
+
+## Thursday 15 October 2026
+- Top 5 à 09:36:24 NY : NFLX (6.2x), CAT (6.1x), SCHW (6.0x), WMT (4.7x), SHOP (4.7x)
+- Achats possibles (bougie haussière) : NFLX, WMT, SHOP
+  - NFLX : cassure déjà faite → achat au marché
+  - WMT : cassure déjà faite → achat au marché
+- Trades exécutés : 3
+  - NFLX : achat 72.53 à 09:36:55 → sortie 72.35 à 09:39:22 = **-1.18 R**
+  - WMT : achat 121.18 à 09:37:01 → sortie 120.9 à 09:37:57 = **-1.21 R** (stoppé dans la minute d’entrée)
+  - SHOP : achat 168.99 à 09:37:03 → sortie 168.2 à 09:45:48 = **-1.23 R**
+- Résultat du jour : -0.09 $ → capital du bot : **49.39 $** (EN VIE)

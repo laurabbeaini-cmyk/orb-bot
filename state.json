@@ -1,5 +1,5 @@
 {
- "equity": 49.4874,
+ "equity": 49.3937,
  "alive": true,
  "started": "2026-09-29",
  "days": {
@@ -571,7 +571,9 @@
      "sym": "SHOP",
      "relvol": 4.669284061721235
     }
-   ]
+   ],
+   "final": true,
+   "pnl": -0.0937
   }
  }
 }
