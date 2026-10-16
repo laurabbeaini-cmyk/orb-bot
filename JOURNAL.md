@@ -106,3 +106,9 @@
   - WMT : achat 121.18 à 09:37:01 → sortie 120.9 à 09:37:57 = **-1.21 R** (stoppé dans la minute d’entrée)
   - SHOP : achat 168.99 à 09:37:03 → sortie 168.2 à 09:45:48 = **-1.23 R**
 - Résultat du jour : -0.09 $ → capital du bot : **49.39 $** (EN VIE)
+
+## Friday 16 October 2026
+- Top 5 à 09:37:22 NY : AA (4.7x), MCD (2.7x), SBUX (2.4x), ABBV (2.3x), BAC (2.0x)
+- Achats possibles (bougie haussière) : aucun — pas de bougie haussière dans le Top 5
+- Trades exécutés : 0
+- Résultat du jour : +0.00 $ → capital du bot : **49.39 $** (EN VIE)
