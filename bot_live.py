@@ -14,6 +14,15 @@ Le capital du bot (50 $ au départ) est calculé à part, avec les règles de ta
 
 Règles de survie : 2 % de risque par trade, 20 % du capital max par position,
 arrêt de la journée à −5 %, « mort » si le capital virtuel passe sous 0,50 $.
+
+VARIANTE A (depuis le 20/10/2026, validée par Laura le 19/10) :
+  - plus aucune entrée « au marché » : si le prix est déjà au-dessus du déclencheur à 9:35,
+    le titre est ignoré (noté « gap, pas d'entrée ») ;
+  - si l'ordre stop est exécuté avec un glissement > MAX_SLIPPAGE_R (0,3 R), la position est
+    refermée immédiatement et notée « glissement excessif » : son P&L compte dans le capital,
+    mais elle n'entre pas dans les statistiques de trades.
+  - mesure : le drapeau « stoppé dans la minute » est recalculé à partir des horodatages
+    (même minute d'horloge) et complété d'une 2e mesure « sortie en moins de 60 s ».
 """
 from __future__ import annotations
 
@@ -41,6 +50,7 @@ START_CAPITAL, DAILY_STOP, DEATH = 50.0, 0.05, 0.50
 SELECT_AT, LATEST_SELECT = time(9, 35, 20), time(10, 30)
 PHASE_A_END, FLATTEN_AT = time(12, 45), time(15, 55)
 POLL = 10  # secondes
+MAX_SLIPPAGE_R = 0.30  # variante A : au-delà, la position est refermée immédiatement
 FILL_WAIT_STEP, FILL_WAIT_MAX = 5, 30  # vérification des ventes : toutes les 5 s, 30 s maximum
 STATE, TRADES, JOURNAL, STATUS = Path("state.json"), Path("trades.csv"), Path("JOURNAL.md"), Path("README.md")
 
@@ -208,22 +218,18 @@ def place_entries(broker, day, today):
         try:
             px = broker.last_price(p["sym"])
             if px >= p["trigger"]:
-                # cassure déjà faite : entrée immédiate au marché (comme l'entrée « gap » du backtest)
-                broker.market_buy(p["sym"], 1, cid)
-                p["market_entry"] = True
-                log(f"{p['sym']}: déjà au-dessus du déclencheur ({px:.2f} ≥ {p['trigger']}) → achat au marché")
+                # VARIANTE A : cassure déjà faite → pas d'entrée au marché, le titre est ignoré
+                p["gap_skipped"] = True
+                log(f"{p['sym']}: déjà au-dessus du déclencheur ({px:.2f} ≥ {p['trigger']}) → pas d'entrée (variante A)")
             else:
                 broker.stop_order(p["sym"], "buy", 1, p["trigger"], cid)
                 log(f"{p['sym']}: ordre d'achat stop à {p['trigger']} (stop prévu à −{p['stopdist']:.2f} $)")
         except Exception as e:
             if "stop price must be greater" in str(e):
-                try:
-                    broker.market_buy(p["sym"], 1, cid)
-                    p["market_entry"] = True
-                    log(f"{p['sym']}: le prix a dépassé le déclencheur entre-temps → achat au marché")
-                    continue
-                except Exception as e2:
-                    e = e2
+                # le prix a dépassé le déclencheur entre-temps : même règle, pas d'entrée au marché
+                p["gap_skipped"] = True
+                log(f"{p['sym']}: le prix a dépassé le déclencheur entre-temps → pas d'entrée (variante A)")
+                continue
             log(f"{p['sym']}: ordre refusé ({e})")
             p["error"] = str(e)[:120]
 
@@ -239,6 +245,14 @@ def manage(broker, day, today, st):
         if s_id in orders or p.get("stop_placed"):
             continue
         fill = float(e.filled_avg_price)
+        slip_R = (fill - p["trigger"]) / p["stopdist"] if p["stopdist"] else 0.0
+        if slip_R > MAX_SLIPPAGE_R:
+            # VARIANTE A : glissement excessif → on referme tout de suite, hors statistiques
+            broker.market_sell(p["sym"], float(e.filled_qty), coid(today, p["sym"], "X0"))
+            p["slippage_exit"] = True
+            p["stop_placed"] = True
+            log(f"{p['sym']}: acheté à {fill:.2f}, glissement {slip_R:+.2f} R > {MAX_SLIPPAGE_R} R → refermé immédiatement (variante A)")
+            continue
         stop = math.floor((fill - p["stopdist"]) * 100) / 100
         px = broker.last_price(p["sym"])
         if px <= stop:
@@ -353,7 +367,8 @@ def finalize(broker, day, today, st, exit_orders=()):
         mine = [o for o in orders if o.symbol == p["sym"]]
         e = next((o for o in mine if o.client_order_id.endswith("-E")), None)
         if e is None or not e.filled_avg_price:
-            rows.append(dict(date=today, sym=p["sym"], triggered=False))
+            rows.append(dict(date=today, sym=p["sym"], triggered=False,
+                             note="gap, pas d'entrée (variante A)" if p.get("gap_skipped") else ""))
             continue
         sells = sorted([o for o in mine if o.client_order_id.split("-")[-1] != "E" and o.filled_avg_price],
                        key=lambda o: o.filled_at)
@@ -367,15 +382,20 @@ def finalize(broker, day, today, st, exit_orders=()):
         t_in, t_out = pd.Timestamp(e.filled_at).tz_convert(NY), pd.Timestamp(x.filled_at).tz_convert(NY)
         R = (exit_ - entry) / p["stopdist"]
         stopped = x.client_order_id.endswith("-S") or x.client_order_id.endswith("-X1")
-        same_min = stopped and t_in.floor("min") == t_out.floor("min")
+        # même minute d'horloge (définition comparable au backtest) et sortie en moins de 60 s
+        same_min = stopped and (t_in.hour, t_in.minute) == (t_out.hour, t_out.minute)
+        within60 = stopped and (t_out - t_in).total_seconds() < 60
         sh = virtual_shares(eq0, entry, p["stopdist"])
         pnl = sh * (exit_ - entry)
         pnl_total += pnl
+        slip_exit = x.client_order_id.endswith("-X0")
         rows.append(dict(date=today, sym=p["sym"], triggered=True, trigger=p["trigger"], entry=round(entry, 4),
                          exit=round(exit_, 4), t_entry=f"{t_in:%H:%M:%S}", t_exit=f"{t_out:%H:%M:%S}",
-                         stopdist=p["stopdist"], R=round(R, 3), stopped=stopped, stopped_same_minute=same_min,
+                         stopdist=p["stopdist"], R="" if slip_exit else round(R, 3), stopped=stopped,
+                         stopped_same_minute=same_min, stopped_within_60s=within60,
                          slippage_entry_R=round((entry - p["trigger"]) / p["stopdist"], 3),
-                         virtual_shares=round(sh, 5), virtual_pnl=round(pnl, 4)))
+                         virtual_shares=round(sh, 5), virtual_pnl=round(pnl, 4),
+                         note="glissement excessif (variante A), hors statistiques" if slip_exit else ""))
     st["equity"] = round(eq0 + pnl_total, 4)
     if st["equity"] < DEATH:
         st["alive"] = False
@@ -386,15 +406,28 @@ def finalize(broker, day, today, st, exit_orders=()):
 
 def write_outputs(st, today, day, rows):
     fields = ["date", "sym", "triggered", "trigger", "entry", "exit", "t_entry", "t_exit", "stopdist", "R",
-              "stopped", "stopped_same_minute", "slippage_entry_R", "virtual_shares", "virtual_pnl", "note"]
+              "stopped", "stopped_same_minute", "slippage_entry_R", "virtual_shares", "virtual_pnl", "note",
+              "stopped_within_60s", "variant"]
     new = not TRADES.exists()
+    if not new:
+        # migration : si l'en-tête existant n'a pas les nouvelles colonnes, on réécrit le fichier
+        with TRADES.open(newline="") as f:
+            old_rows = list(csv.DictReader(f))
+            old_fields = list(old_rows[0].keys()) if old_rows else fields
+        if old_fields != fields:
+            with TRADES.open("w", newline="") as f:
+                w = csv.DictWriter(f, fieldnames=fields)
+                w.writeheader()
+                for r in old_rows:
+                    w.writerow({k: r.get(k, "") for k in fields})
     with TRADES.open("a", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields)
         if new:
             w.writeheader()
         for r in rows:
+            r.setdefault("variant", "A")
             w.writerow({k: r.get(k, "") for k in fields})
-    done = [r for r in rows if r.get("R") is not None]
+    done = [r for r in rows if r.get("R") not in (None, "")]
     lines = [f"\n## {today:%A %d %B %Y}"]
     if day.get("skipped"):
         lines.append(f"- ⏭️ Journée sautée : {day.get('skip_reason', 'raison inconnue')}")
@@ -406,8 +439,10 @@ def write_outputs(st, today, day, rows):
         for p in day["picks"]:
             if p.get("error"):
                 lines.append(f"  - ⚠️ {p['sym']} : ordre refusé ({p['error']})")
-            elif p.get("market_entry"):
-                lines.append(f"  - {p['sym']} : cassure déjà faite → achat au marché")
+            elif p.get("gap_skipped"):
+                lines.append(f"  - {p['sym']} : cassure déjà faite → pas d'entrée (variante A)")
+            elif p.get("slippage_exit"):
+                lines.append(f"  - {p['sym']} : glissement > {MAX_SLIPPAGE_R} R → refermé immédiatement (variante A, hors statistiques)")
     lines.append(f"- Trades exécutés : {len(done)}")
     for r in done:
         lines.append(f"  - {r['sym']} : achat {r['entry']} à {r['t_entry']} → sortie {r['exit']} à {r['t_exit']} "
@@ -426,9 +461,22 @@ def write_outputs(st, today, day, rows):
 
 def write_status(st):
     t = pd.read_csv(TRADES) if TRADES.exists() else pd.DataFrame()
+    n_slip = int(t["note"].astype(str).str.startswith("glissement excessif").sum()) if len(t) and "note" in t else 0
     t = t[t.get("R", pd.Series(dtype=float)).notna()] if len(t) else t
     n = len(t)
-    stopped_min = t.stopped_same_minute.astype(str).str.lower().eq("true").mean() if n else 0
+    if n:
+        # recalcul depuis les horodatages (le drapeau enregistré s'était révélé faux pour un trade)
+        t_in = pd.to_datetime(t.t_entry, format="%H:%M:%S")
+        t_out = pd.to_datetime(t.t_exit, format="%H:%M:%S")
+        stp = t.stopped.astype(str).str.lower().eq("true")
+        same = stp & (t_in.dt.hour == t_out.dt.hour) & (t_in.dt.minute == t_out.dt.minute)
+        w60 = stp & ((t_out - t_in).dt.total_seconds() < 60)
+        stopped_min, stopped_60 = same.mean(), w60.mean()
+        nA = int((t.get("variant", pd.Series(dtype=str)).astype(str) == "A").sum())
+        rA = t[t.get("variant", pd.Series(dtype=str)).astype(str) == "A"].R.mean() if nA else float("nan")
+    else:
+        stopped_min = stopped_60 = 0
+        nA, rA = 0, float("nan")
     txt = f"""# 🤖 Bot de survie ORB — état au {datetime.now(PARIS):%d/%m/%Y %H:%M} (Paris)
 
 | | |
@@ -439,8 +487,10 @@ def write_status(st):
 | Trades exécutés | {n} |
 | Gagnants | {(t.R > 0).mean()*100 if n else 0:.0f} % |
 | R moyen réel | {t.R.mean() if n else 0:+.3f} |
-| **Stoppés dans la minute d'entrée** | **{stopped_min*100:.0f} %** (backtest : 13 % optimiste / 47 % pessimiste) |
+| **Stoppés dans la minute d'entrée** | **{stopped_min*100:.0f} %** (même minute d'horloge ; backtest : 13 % optimiste / 47 % pessimiste) |
+| Sorties en moins de 60 s | {stopped_60*100:.0f} % |
 | Glissement moyen à l'entrée | {t.slippage_entry_R.mean() if n else 0:+.3f} R |
+| Variante A (depuis le 20/10) | {nA} trades, R moyen {rA:+.3f}, {n_slip} entrée(s) refermée(s) pour glissement excessif |
 
 Le test porte sur 2 semaines : trop peu de trades pour juger la rentabilité,
 mais assez pour savoir si le % « stoppés dans la minute d'entrée » est proche de 13 % ou de 47 %.
