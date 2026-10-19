@@ -112,3 +112,11 @@
 - Achats possibles (bougie haussière) : aucun — pas de bougie haussière dans le Top 5
 - Trades exécutés : 0
 - Résultat du jour : +0.00 $ → capital du bot : **49.39 $** (EN VIE)
+
+## Monday 19 October 2026
+- Top 5 à 09:36:21 NY : CLF (9.3x), DDOG (2.2x), SBUX (2.2x), PINS (2.0x), ADBE (1.9x)
+- Achats possibles (bougie haussière) : DDOG, ADBE
+  - ADBE : cassure déjà faite → pas d'entrée (variante A)
+- Trades exécutés : 1
+  - DDOG : achat 263.89 à 10:30:00 → sortie 262.55 à 10:31:12 = **-1.09 R**
+- Résultat du jour : -0.05 $ → capital du bot : **49.34 $** (EN VIE)

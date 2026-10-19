@@ -1,5 +1,5 @@
 {
- "equity": 49.3937,
+ "equity": 49.3435,
  "alive": true,
  "started": "2026-09-29",
  "days": {
@@ -648,7 +648,9 @@
      "sym": "ADBE",
      "relvol": 1.9495553287651262
     }
-   ]
+   ],
+   "final": true,
+   "pnl": -0.0502
   }
  }
 }
