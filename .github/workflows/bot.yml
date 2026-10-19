@@ -1,22 +1,11 @@
 name: Bot ORB (paper)
 
-# Heures en UTC. Le script regarde lui-même l'heure de New York et sait quoi faire.
+# Depuis le 20/10/2026 (variante A) : UN SEUL déclencheur, externe (cron-job.org), qui appelle
+# « workflow_dispatch » deux fois par jour de bourse : vers 9:00 NY (sélection + phase A)
+# et vers 12:50 NY (surveillance jusqu'à 15:55, fermeture, journal).
+# Les créneaux planifiés GitHub (« schedule ») ont été retirés : ils doublonnaient cron-job.org
+# et produisaient des dizaines de lancements annulés par jour.
 on:
-  schedule:
-    # Démarrage entre 8:00 et 9:30 (heure de New York), plusieurs créneaux car GitHub
-    # retarde parfois les lancements planifiés. Le premier qui démarre attend 9:35 NY ;
-    # les suivants voient que la journée est déjà en cours.
-    # Heure d'été NY (UTC-4) : 12:03 → 8:03 … 13:23 → 9:23 · heure d'hiver (UTC-5) : 13:03 → 8:03 … 14:23 → 9:23
-    - cron: "3 12 * * 1-5"
-    - cron: "23 12 * * 1-5"
-    - cron: "43 12 * * 1-5"
-    - cron: "3 13 * * 1-5"
-    - cron: "23 13 * * 1-5"
-    - cron: "43 13 * * 1-5"
-    - cron: "3 14 * * 1-5"
-    - cron: "23 14 * * 1-5"
-    - cron: "41 16 * * 1-5"   # ≈ 12:41 NY (été) → surveillance jusqu'à 15:55, fermeture, journal
-    - cron: "41 17 * * 1-5"   # ≈ 12:41 NY (hiver)
   workflow_dispatch: {}       # bouton « Run workflow » pour un lancement manuel
 
 concurrency:
