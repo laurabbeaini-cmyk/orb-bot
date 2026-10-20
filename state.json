@@ -1,5 +1,5 @@
 {
- "equity": 49.3435,
+ "equity": 49.2914,
  "alive": true,
  "started": "2026-09-29",
  "days": {
@@ -696,7 +696,9 @@
      "sym": "TXN",
      "relvol": 3.7534324259789873
     }
-   ]
+   ],
+   "final": true,
+   "pnl": -0.0521
   }
  }
 }

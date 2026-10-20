@@ -30,3 +30,5 @@ date,sym,triggered,trigger,entry,exit,t_entry,t_exit,stopdist,R,stopped,stopped_
 2026-10-15,SHOP,True,168.68,168.99,168.2,09:37:03,09:45:48,0.6437,-1.227,True,False,0.482,0.05857,-0.0463,,,
 2026-10-19,DDOG,True,263.64,263.89,262.55,10:30:00,10:31:12,1.2294,-1.09,True,False,0.203,0.03744,-0.0502,,False,A
 2026-10-19,ADBE,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
+2026-10-20,GM,True,78.42,78.45,78.2,09:38:09,09:40:36,0.2039,-1.226,True,False,0.147,0.1258,-0.0314,,False,A
+2026-10-20,TXN,True,276.84,277.22,276.64,09:38:11,09:38:18,0.8814,,False,False,0.431,0.0356,-0.0206,"glissement excessif (variante A), hors statistiques",False,A

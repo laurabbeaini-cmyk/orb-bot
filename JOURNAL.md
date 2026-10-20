@@ -120,3 +120,11 @@
 - Trades exécutés : 1
   - DDOG : achat 263.89 à 10:30:00 → sortie 262.55 à 10:31:12 = **-1.09 R**
 - Résultat du jour : -0.05 $ → capital du bot : **49.34 $** (EN VIE)
+
+## Tuesday 20 October 2026
+- Top 5 à 09:36:56 NY : CLF (7.0x), GE (5.6x), GM (4.1x), HAL (3.9x), TXN (3.8x)
+- Achats possibles (bougie haussière) : GM, TXN
+  - TXN : glissement > 0.3 R → refermé immédiatement (variante A, hors statistiques)
+- Trades exécutés : 1
+  - GM : achat 78.45 à 09:38:09 → sortie 78.2 à 09:40:36 = **-1.23 R**
+- Résultat du jour : -0.05 $ → capital du bot : **49.29 $** (EN VIE)
