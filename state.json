@@ -1,5 +1,5 @@
 {
- "equity": 49.2914,
+ "equity": 49.2855,
  "alive": true,
  "started": "2026-09-29",
  "days": {
@@ -751,7 +751,9 @@
      "sym": "NFLX",
      "relvol": 3.4284624333586606
     }
-   ]
+   ],
+   "final": true,
+   "pnl": -0.0059
   }
  }
 }

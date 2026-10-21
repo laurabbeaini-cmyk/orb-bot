@@ -128,3 +128,11 @@
 - Trades exécutés : 1
   - GM : achat 78.45 à 09:38:09 → sortie 78.2 à 09:40:36 = **-1.23 R**
 - Résultat du jour : -0.05 $ → capital du bot : **49.29 $** (EN VIE)
+
+## Wednesday 21 October 2026
+- Top 5 à 09:36:08 NY : SMCI (6.5x), UAL (6.2x), CMCSA (6.2x), ROKU (4.7x), NFLX (3.4x)
+- Achats possibles (bougie haussière) : SMCI, CMCSA, NFLX
+  - CMCSA : cassure déjà faite → pas d'entrée (variante A)
+  - NFLX : glissement > 0.3 R → refermé immédiatement (variante A, hors statistiques)
+- Trades exécutés : 0
+- Résultat du jour : -0.01 $ → capital du bot : **49.29 $** (EN VIE)
