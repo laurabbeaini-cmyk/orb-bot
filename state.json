@@ -699,6 +699,59 @@
    ],
    "final": true,
    "pnl": -0.0521
+  },
+  "2026-10-21": {
+   "picks": [
+    {
+     "sym": "SMCI",
+     "trigger": 37.41,
+     "stopdist": 0.251,
+     "relvol": 6.46,
+     "atr": 2.51
+    },
+    {
+     "sym": "CMCSA",
+     "trigger": 22.1,
+     "stopdist": 0.0562,
+     "relvol": 6.18,
+     "atr": 0.562,
+     "gap_skipped": true
+    },
+    {
+     "sym": "NFLX",
+     "trigger": 66.31,
+     "stopdist": 0.1729,
+     "relvol": 3.43,
+     "atr": 1.729,
+     "slippage_exit": true,
+     "stop_placed": true
+    }
+   ],
+   "equity_start": 49.2914,
+   "selected": true,
+   "selected_at": "09:36:08",
+   "top5": [
+    {
+     "sym": "SMCI",
+     "relvol": 6.455888127499094
+    },
+    {
+     "sym": "UAL",
+     "relvol": 6.188934217236104
+    },
+    {
+     "sym": "CMCSA",
+     "relvol": 6.184191443074692
+    },
+    {
+     "sym": "ROKU",
+     "relvol": 4.725843266548313
+    },
+    {
+     "sym": "NFLX",
+     "relvol": 3.4284624333586606
+    }
+   ]
   }
  }
 }
