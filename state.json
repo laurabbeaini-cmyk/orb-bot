@@ -754,6 +754,72 @@
    ],
    "final": true,
    "pnl": -0.0059
+  },
+  "2026-10-22": {
+   "picks": [
+    {
+     "sym": "AAL",
+     "trigger": 11.96,
+     "stopdist": 0.0508,
+     "relvol": 7.25,
+     "atr": 0.508,
+     "gap_skipped": true
+    },
+    {
+     "sym": "SPOT",
+     "trigger": 588.5,
+     "stopdist": 1.8309,
+     "relvol": 7.16,
+     "atr": 18.309
+    },
+    {
+     "sym": "GE",
+     "trigger": 294.25,
+     "stopdist": 0.8011,
+     "relvol": 6.81,
+     "atr": 8.011
+    },
+    {
+     "sym": "PANW",
+     "trigger": 364.74,
+     "stopdist": 1.8043,
+     "relvol": 4.62,
+     "atr": 18.043,
+     "stop_placed": true
+    },
+    {
+     "sym": "OXY",
+     "trigger": 63.56,
+     "stopdist": 0.149,
+     "relvol": 3.98,
+     "atr": 1.49
+    }
+   ],
+   "equity_start": 49.2855,
+   "selected": true,
+   "selected_at": "09:36:20",
+   "top5": [
+    {
+     "sym": "AAL",
+     "relvol": 7.252555938025211
+    },
+    {
+     "sym": "SPOT",
+     "relvol": 7.156057702007465
+    },
+    {
+     "sym": "GE",
+     "relvol": 6.805516122490367
+    },
+    {
+     "sym": "PANW",
+     "relvol": 4.622628143500481
+    },
+    {
+     "sym": "OXY",
+     "relvol": 3.9796566130770477
+    }
+   ]
   }
  }
 }
