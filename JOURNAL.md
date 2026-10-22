@@ -136,3 +136,12 @@
   - NFLX : glissement > 0.3 R → refermé immédiatement (variante A, hors statistiques)
 - Trades exécutés : 0
 - Résultat du jour : -0.01 $ → capital du bot : **49.29 $** (EN VIE)
+
+## Thursday 22 October 2026
+- Top 5 à 09:36:20 NY : AAL (7.3x), SPOT (7.2x), GE (6.8x), PANW (4.6x), OXY (4.0x)
+- Achats possibles (bougie haussière) : AAL, SPOT, GE, PANW, OXY
+  - AAL : cassure déjà faite → pas d'entrée (variante A)
+- Trades exécutés : 2
+  - SPOT : achat 588.77 à 15:19:35 → sortie 586.27 à 15:20:24 = **-1.36 R**
+  - PANW : achat 365.19 à 09:43:05 → sortie 363.05 à 09:45:06 = **-1.19 R**
+- Résultat du jour : -0.10 $ → capital du bot : **49.19 $** (EN VIE)
