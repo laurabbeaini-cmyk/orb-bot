@@ -145,3 +145,12 @@
   - SPOT : achat 588.77 à 15:19:35 → sortie 586.27 à 15:20:24 = **-1.36 R**
   - PANW : achat 365.19 à 09:43:05 → sortie 363.05 à 09:45:06 = **-1.19 R**
 - Résultat du jour : -0.10 $ → capital du bot : **49.19 $** (EN VIE)
+
+## Friday 23 October 2026
+- Top 5 à 09:37:08 NY : ENPH (5.7x), GILD (3.5x), SLB (3.4x), GE (2.7x), UPST (2.6x)
+- Achats possibles (bougie haussière) : ENPH, GILD, SLB
+  - ENPH : cassure déjà faite → pas d'entrée (variante A)
+  - GILD : cassure déjà faite → pas d'entrée (variante A)
+- Trades exécutés : 1
+  - SLB : achat 50.47 à 09:42:22 → sortie 52.96 à 15:55:46 = **+17.66 R**
+- Résultat du jour : +0.49 $ → capital du bot : **49.67 $** (EN VIE)

@@ -40,3 +40,6 @@ date,sym,triggered,trigger,entry,exit,t_entry,t_exit,stopdist,R,stopped,stopped_
 2026-10-22,GE,False,,,,,,,,,,,,,,,A
 2026-10-22,PANW,True,364.74,365.19,363.05,09:43:05,09:45:06,1.8043,-1.186,True,False,0.249,0.02699,-0.0578,,False,A
 2026-10-22,OXY,False,,,,,,,,,,,,,,,A
+2026-10-23,ENPH,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
+2026-10-23,GILD,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
+2026-10-23,SLB,True,50.47,50.47,52.96,09:42:22,15:55:46,0.141,17.66,False,False,0.0,0.19491,0.4853,,False,A
