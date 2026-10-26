@@ -878,6 +878,67 @@
    ],
    "final": true,
    "pnl": 0.4853
+  },
+  "2026-10-26": {
+   "picks": [
+    {
+     "sym": "XOM",
+     "trigger": 182.55,
+     "stopdist": 0.3925,
+     "relvol": 3.12,
+     "atr": 3.925,
+     "stop_placed": true
+    },
+    {
+     "sym": "UAL",
+     "trigger": 100.21,
+     "stopdist": 0.4901,
+     "relvol": 2.75,
+     "atr": 4.901,
+     "stop_placed": true
+    },
+    {
+     "sym": "COST",
+     "trigger": 1003.82,
+     "stopdist": 1.6403,
+     "relvol": 2.54,
+     "atr": 16.403,
+     "gap_skipped": true
+    },
+    {
+     "sym": "TSLA",
+     "trigger": 391.1,
+     "stopdist": 1.1702,
+     "relvol": 2.51,
+     "atr": 11.702,
+     "stop_placed": true
+    }
+   ],
+   "equity_start": 49.6712,
+   "selected": true,
+   "selected_at": "09:36:15",
+   "top5": [
+    {
+     "sym": "XOM",
+     "relvol": 3.1216963363509325
+    },
+    {
+     "sym": "UAL",
+     "relvol": 2.745119955291206
+    },
+    {
+     "sym": "COST",
+     "relvol": 2.544411198098127
+    },
+    {
+     "sym": "TSLA",
+     "relvol": 2.513184059599382
+    },
+    {
+     "sym": "CMCSA",
+     "relvol": 2.3053133660017373
+    }
+   ]
   }
  }
 }
