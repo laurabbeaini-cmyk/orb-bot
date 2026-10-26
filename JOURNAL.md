@@ -154,3 +154,13 @@
 - Trades exécutés : 1
   - SLB : achat 50.47 à 09:42:22 → sortie 52.96 à 15:55:46 = **+17.66 R**
 - Résultat du jour : +0.49 $ → capital du bot : **49.67 $** (EN VIE)
+
+## Monday 26 October 2026
+- Top 5 à 09:36:15 NY : XOM (3.1x), UAL (2.7x), COST (2.5x), TSLA (2.5x), CMCSA (2.3x)
+- Achats possibles (bougie haussière) : XOM, UAL, COST, TSLA
+  - COST : cassure déjà faite → pas d'entrée (variante A)
+- Trades exécutés : 3
+  - XOM : achat 182.65 à 09:40:21 → sortie 182.22 à 10:35:44 = **-1.10 R**
+  - UAL : achat 100.25 à 09:36:22 → sortie 100.19 à 09:36:29 = **-0.12 R** (stoppé dans la minute d’entrée)
+  - TSLA : achat 391.1 à 09:38:00 → sortie 389.79 à 09:47:03 = **-1.12 R**
+- Résultat du jour : -0.06 $ → capital du bot : **49.61 $** (EN VIE)

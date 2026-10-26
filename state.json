@@ -1,5 +1,5 @@
 {
- "equity": 49.6712,
+ "equity": 49.6086,
  "alive": true,
  "started": "2026-09-29",
  "days": {
@@ -938,7 +938,9 @@
      "sym": "CMCSA",
      "relvol": 2.3053133660017373
     }
-   ]
+   ],
+   "final": true,
+   "pnl": -0.0626
   }
  }
 }

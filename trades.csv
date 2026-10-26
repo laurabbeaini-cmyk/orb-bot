@@ -43,3 +43,7 @@ date,sym,triggered,trigger,entry,exit,t_entry,t_exit,stopdist,R,stopped,stopped_
 2026-10-23,ENPH,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
 2026-10-23,GILD,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
 2026-10-23,SLB,True,50.47,50.47,52.96,09:42:22,15:55:46,0.141,17.66,False,False,0.0,0.19491,0.4853,,False,A
+2026-10-26,XOM,True,182.55,182.65,182.22,09:40:21,10:35:44,0.3925,-1.096,True,False,0.255,0.05439,-0.0234,,False,A
+2026-10-26,UAL,True,100.21,100.25,100.19,09:36:22,09:36:29,0.4901,-0.122,True,True,0.082,0.09909,-0.0059,,True,A
+2026-10-26,COST,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
+2026-10-26,TSLA,True,391.1,391.1,389.79,09:38:00,09:47:03,1.1702,-1.119,True,False,0.0,0.0254,-0.0333,,False,A
