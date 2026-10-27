@@ -941,6 +941,42 @@
    ],
    "final": true,
    "pnl": -0.0626
+  },
+  "2026-10-27": {
+   "picks": [
+    {
+     "sym": "PYPL",
+     "trigger": 56.57,
+     "stopdist": 0.1172,
+     "relvol": 5.72,
+     "atr": 1.172
+    }
+   ],
+   "equity_start": 49.6086,
+   "selected": true,
+   "selected_at": "09:37:00",
+   "top5": [
+    {
+     "sym": "DASH",
+     "relvol": 13.384438685357521
+    },
+    {
+     "sym": "SOFI",
+     "relvol": 8.882506107661346
+    },
+    {
+     "sym": "PYPL",
+     "relvol": 5.721263077932392
+    },
+    {
+     "sym": "PINS",
+     "relvol": 5.674128457419002
+    },
+    {
+     "sym": "GE",
+     "relvol": 3.102287846503206
+    }
+   ]
   }
  }
 }
