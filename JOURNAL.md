@@ -164,3 +164,9 @@
   - UAL : achat 100.25 à 09:36:22 → sortie 100.19 à 09:36:29 = **-0.12 R** (stoppé dans la minute d’entrée)
   - TSLA : achat 391.1 à 09:38:00 → sortie 389.79 à 09:47:03 = **-1.12 R**
 - Résultat du jour : -0.06 $ → capital du bot : **49.61 $** (EN VIE)
+
+## Tuesday 27 October 2026
+- Top 5 à 09:37:00 NY : DASH (13.4x), SOFI (8.9x), PYPL (5.7x), PINS (5.7x), GE (3.1x)
+- Achats possibles (bougie haussière) : PYPL
+- Trades exécutés : 0
+- Résultat du jour : +0.00 $ → capital du bot : **49.61 $** (EN VIE)
