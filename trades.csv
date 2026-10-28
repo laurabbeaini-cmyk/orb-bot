@@ -48,3 +48,6 @@ date,sym,triggered,trigger,entry,exit,t_entry,t_exit,stopdist,R,stopped,stopped_
 2026-10-26,COST,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
 2026-10-26,TSLA,True,391.1,391.1,389.79,09:38:00,09:47:03,1.1702,-1.119,True,False,0.0,0.0254,-0.0333,,False,A
 2026-10-27,PYPL,False,,,,,,,,,,,,,,,A
+2026-10-28,ENPH,True,25.48,25.6,25.45,09:37:04,09:37:06,0.1735,,False,False,0.692,0.38757,-0.0581,"glissement excessif (variante A), hors statistiques",False,A
+2026-10-28,HOOD,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
+2026-10-28,DASH,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A

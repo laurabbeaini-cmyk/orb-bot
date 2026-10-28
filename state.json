@@ -1,5 +1,5 @@
 {
- "equity": 49.6086,
+ "equity": 49.5505,
  "alive": true,
  "started": "2026-09-29",
  "days": {
@@ -1032,7 +1032,9 @@
      "sym": "DASH",
      "relvol": 2.4527813712807243
     }
-   ]
+   ],
+   "final": true,
+   "pnl": -0.0581
   }
  }
 }

@@ -170,3 +170,12 @@
 - Achats possibles (bougie haussière) : PYPL
 - Trades exécutés : 0
 - Résultat du jour : +0.00 $ → capital du bot : **49.61 $** (EN VIE)
+
+## Wednesday 28 October 2026
+- Top 5 à 09:36:44 NY : ENPH (7.8x), UBER (5.5x), BA (5.0x), HOOD (2.9x), DASH (2.5x)
+- Achats possibles (bougie haussière) : ENPH, HOOD, DASH
+  - ENPH : glissement > 0.3 R → refermé immédiatement (variante A, hors statistiques)
+  - HOOD : cassure déjà faite → pas d'entrée (variante A)
+  - DASH : cassure déjà faite → pas d'entrée (variante A)
+- Trades exécutés : 0
+- Résultat du jour : -0.06 $ → capital du bot : **49.55 $** (EN VIE)
