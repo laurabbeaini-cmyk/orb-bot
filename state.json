@@ -979,6 +979,60 @@
    ],
    "final": true,
    "pnl": 0.0
+  },
+  "2026-10-28": {
+   "picks": [
+    {
+     "sym": "ENPH",
+     "trigger": 25.48,
+     "stopdist": 0.1735,
+     "relvol": 7.85,
+     "atr": 1.735,
+     "slippage_exit": true,
+     "stop_placed": true
+    },
+    {
+     "sym": "HOOD",
+     "trigger": 91.51,
+     "stopdist": 0.5188,
+     "relvol": 2.88,
+     "atr": 5.188,
+     "gap_skipped": true
+    },
+    {
+     "sym": "DASH",
+     "trigger": 172.53,
+     "stopdist": 0.8838,
+     "relvol": 2.45,
+     "atr": 8.838,
+     "gap_skipped": true
+    }
+   ],
+   "equity_start": 49.6086,
+   "selected": true,
+   "selected_at": "09:36:44",
+   "top5": [
+    {
+     "sym": "ENPH",
+     "relvol": 7.847315040490605
+    },
+    {
+     "sym": "UBER",
+     "relvol": 5.483895540430887
+    },
+    {
+     "sym": "BA",
+     "relvol": 4.9867860773055686
+    },
+    {
+     "sym": "HOOD",
+     "relvol": 2.884119252469128
+    },
+    {
+     "sym": "DASH",
+     "relvol": 2.4527813712807243
+    }
+   ]
   }
  }
 }
