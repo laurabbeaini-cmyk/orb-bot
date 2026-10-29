@@ -1035,6 +1035,51 @@
    ],
    "final": true,
    "pnl": -0.0581
+  },
+  "2026-10-29": {
+   "picks": [
+    {
+     "sym": "ZS",
+     "trigger": 238.83,
+     "stopdist": 1.2982,
+     "relvol": 5.1,
+     "atr": 12.982,
+     "gap_skipped": true
+    },
+    {
+     "sym": "DE",
+     "trigger": 638.81,
+     "stopdist": 1.7431,
+     "relvol": 4.67,
+     "atr": 17.431,
+     "gap_skipped": true
+    }
+   ],
+   "equity_start": 49.5505,
+   "selected": true,
+   "selected_at": "09:37:36",
+   "top5": [
+    {
+     "sym": "XOM",
+     "relvol": 12.182257349214396
+    },
+    {
+     "sym": "GOOGL",
+     "relvol": 11.453278949997694
+    },
+    {
+     "sym": "DASH",
+     "relvol": 6.645734926368435
+    },
+    {
+     "sym": "ZS",
+     "relvol": 5.100365797896663
+    },
+    {
+     "sym": "DE",
+     "relvol": 4.6700014291839365
+    }
+   ]
   }
  }
 }
