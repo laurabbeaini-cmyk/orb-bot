@@ -179,3 +179,11 @@
   - DASH : cassure déjà faite → pas d'entrée (variante A)
 - Trades exécutés : 0
 - Résultat du jour : -0.06 $ → capital du bot : **49.55 $** (EN VIE)
+
+## Thursday 29 October 2026
+- Top 5 à 09:37:36 NY : XOM (12.2x), GOOGL (11.5x), DASH (6.6x), ZS (5.1x), DE (4.7x)
+- Achats possibles (bougie haussière) : ZS, DE
+  - ZS : cassure déjà faite → pas d'entrée (variante A)
+  - DE : cassure déjà faite → pas d'entrée (variante A)
+- Trades exécutés : 0
+- Résultat du jour : +0.00 $ → capital du bot : **49.55 $** (EN VIE)
