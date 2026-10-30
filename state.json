@@ -1082,6 +1082,42 @@
    ],
    "final": true,
    "pnl": 0.0
+  },
+  "2026-10-30": {
+   "picks": [
+    {
+     "sym": "RBLX",
+     "trigger": 47.64,
+     "stopdist": 0.2442,
+     "relvol": 10.1,
+     "atr": 2.442
+    }
+   ],
+   "equity_start": 49.5505,
+   "selected": true,
+   "selected_at": "09:37:02",
+   "top5": [
+    {
+     "sym": "ARM",
+     "relvol": 11.378222813528463
+    },
+    {
+     "sym": "RBLX",
+     "relvol": 10.099352051835853
+    },
+    {
+     "sym": "MSTR",
+     "relvol": 9.453366681527267
+    },
+    {
+     "sym": "INTC",
+     "relvol": 9.395315091936592
+    },
+    {
+     "sym": "COIN",
+     "relvol": 7.777034273723479
+    }
+   ]
   }
  }
 }
