@@ -53,3 +53,4 @@ date,sym,triggered,trigger,entry,exit,t_entry,t_exit,stopdist,R,stopped,stopped_
 2026-10-28,DASH,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
 2026-10-29,ZS,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
 2026-10-29,DE,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
+2026-10-30,RBLX,False,,,,,,,,,,,,,,,A

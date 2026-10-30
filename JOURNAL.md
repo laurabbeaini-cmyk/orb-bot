@@ -187,3 +187,9 @@
   - DE : cassure déjà faite → pas d'entrée (variante A)
 - Trades exécutés : 0
 - Résultat du jour : +0.00 $ → capital du bot : **49.55 $** (EN VIE)
+
+## Friday 30 October 2026
+- Top 5 à 09:37:02 NY : ARM (11.4x), RBLX (10.1x), MSTR (9.5x), INTC (9.4x), COIN (7.8x)
+- Achats possibles (bougie haussière) : RBLX
+- Trades exécutés : 0
+- Résultat du jour : +0.00 $ → capital du bot : **49.55 $** (EN VIE)
