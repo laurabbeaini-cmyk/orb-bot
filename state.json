@@ -1120,6 +1120,59 @@
    ],
    "final": true,
    "pnl": 0.0
+  },
+  "2026-11-02": {
+   "picks": [
+    {
+     "sym": "ABNB",
+     "trigger": 167.93,
+     "stopdist": 0.4083,
+     "relvol": 5.99,
+     "atr": 4.083,
+     "gap_skipped": true
+    },
+    {
+     "sym": "SHOP",
+     "trigger": 160.38,
+     "stopdist": 0.7936,
+     "relvol": 4.7,
+     "atr": 7.936,
+     "gap_skipped": true
+    },
+    {
+     "sym": "BA",
+     "trigger": 175.44,
+     "stopdist": 0.578,
+     "relvol": 4.08,
+     "atr": 5.78,
+     "stop_placed": true
+    }
+   ],
+   "equity_start": 49.5505,
+   "selected": true,
+   "selected_at": "09:36:05",
+   "top5": [
+    {
+     "sym": "ROKU",
+     "relvol": 8.909885172241637
+    },
+    {
+     "sym": "ABNB",
+     "relvol": 5.9919291694272125
+    },
+    {
+     "sym": "SHOP",
+     "relvol": 4.6960405946255
+    },
+    {
+     "sym": "BA",
+     "relvol": 4.084807593344388
+    },
+    {
+     "sym": "PYPL",
+     "relvol": 3.9390286512928023
+    }
+   ]
   }
  }
 }
