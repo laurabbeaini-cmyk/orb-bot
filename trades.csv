@@ -54,3 +54,6 @@ date,sym,triggered,trigger,entry,exit,t_entry,t_exit,stopdist,R,stopped,stopped_
 2026-10-29,ZS,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
 2026-10-29,DE,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
 2026-10-30,RBLX,False,,,,,,,,,,,,,,,A
+2026-11-02,ABNB,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
+2026-11-02,SHOP,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
+2026-11-02,BA,True,175.44,175.54,174.82,10:01:41,10:01:59,0.578,-1.246,True,True,0.173,0.05645,-0.0406,,True,A

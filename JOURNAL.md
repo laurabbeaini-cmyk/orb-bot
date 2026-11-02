@@ -193,3 +193,12 @@
 - Achats possibles (bougie haussière) : RBLX
 - Trades exécutés : 0
 - Résultat du jour : +0.00 $ → capital du bot : **49.55 $** (EN VIE)
+
+## Monday 02 November 2026
+- Top 5 à 09:36:05 NY : ROKU (8.9x), ABNB (6.0x), SHOP (4.7x), BA (4.1x), PYPL (3.9x)
+- Achats possibles (bougie haussière) : ABNB, SHOP, BA
+  - ABNB : cassure déjà faite → pas d'entrée (variante A)
+  - SHOP : cassure déjà faite → pas d'entrée (variante A)
+- Trades exécutés : 1
+  - BA : achat 175.54 à 10:01:41 → sortie 174.82 à 10:01:59 = **-1.25 R** (stoppé dans la minute d’entrée)
+- Résultat du jour : -0.04 $ → capital du bot : **49.51 $** (EN VIE)

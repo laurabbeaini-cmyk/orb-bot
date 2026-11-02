@@ -1,5 +1,5 @@
 {
- "equity": 49.5505,
+ "equity": 49.5099,
  "alive": true,
  "started": "2026-09-29",
  "days": {
@@ -1172,7 +1172,9 @@
      "sym": "PYPL",
      "relvol": 3.9390286512928023
     }
-   ]
+   ],
+   "final": true,
+   "pnl": -0.0406
   }
  }
 }
