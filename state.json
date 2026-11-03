@@ -1,5 +1,5 @@
 {
- "equity": 49.5099,
+ "equity": 49.7441,
  "alive": true,
  "started": "2026-09-29",
  "days": {
@@ -1228,7 +1228,9 @@
      "sym": "UPST",
      "relvol": 4.620268062606496
     }
-   ]
+   ],
+   "final": true,
+   "pnl": 0.2342
   }
  }
 }

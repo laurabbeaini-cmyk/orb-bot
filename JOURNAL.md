@@ -202,3 +202,12 @@
 - Trades exécutés : 1
   - BA : achat 175.54 à 10:01:41 → sortie 174.82 à 10:01:59 = **-1.25 R** (stoppé dans la minute d’entrée)
 - Résultat du jour : -0.04 $ → capital du bot : **49.51 $** (EN VIE)
+
+## Tuesday 03 November 2026
+- Top 5 à 09:36:48 NY : PLTR (8.9x), ORCL (6.0x), FSLR (5.8x), SHOP (4.9x), UPST (4.6x)
+- Achats possibles (bougie haussière) : PLTR, ORCL, SHOP
+  - PLTR : cassure déjà faite → pas d'entrée (variante A)
+  - SHOP : glissement > 0.3 R → refermé immédiatement (variante A, hors statistiques)
+- Trades exécutés : 1
+  - ORCL : achat 123.19 à 09:42:28 → sortie 126.26 à 15:55:47 = **+3.70 R**
+- Résultat du jour : +0.23 $ → capital du bot : **49.74 $** (EN VIE)

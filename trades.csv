@@ -57,3 +57,6 @@ date,sym,triggered,trigger,entry,exit,t_entry,t_exit,stopdist,R,stopped,stopped_
 2026-11-02,ABNB,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
 2026-11-02,SHOP,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
 2026-11-02,BA,True,175.44,175.54,174.82,10:01:41,10:01:59,0.578,-1.246,True,True,0.173,0.05645,-0.0406,,True,A
+2026-11-03,PLTR,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
+2026-11-03,ORCL,True,123.16,123.19,126.26,09:42:28,15:55:47,0.83,3.699,False,False,0.036,0.08038,0.2468,,False,A
+2026-11-03,SHOP,True,141.91,142.2,142.02,09:38:47,09:38:52,0.8088,,False,False,0.359,0.06963,-0.0125,"glissement excessif (variante A), hors statistiques",False,A
