@@ -1231,6 +1231,51 @@
    ],
    "final": true,
    "pnl": 0.2342
+  },
+  "2026-11-04": {
+   "picks": [
+    {
+     "sym": "FSLR",
+     "trigger": 212.55,
+     "stopdist": 0.7306,
+     "relvol": 10.56,
+     "atr": 7.306,
+     "gap_skipped": true
+    },
+    {
+     "sym": "ENPH",
+     "trigger": 33.98,
+     "stopdist": 0.2135,
+     "relvol": 5.49,
+     "atr": 2.135,
+     "gap_skipped": true
+    }
+   ],
+   "equity_start": 49.7441,
+   "selected": true,
+   "selected_at": "09:37:44",
+   "top5": [
+    {
+     "sym": "CVS",
+     "relvol": 16.208598678506295
+    },
+    {
+     "sym": "RIOT",
+     "relvol": 11.759589817685601
+    },
+    {
+     "sym": "FSLR",
+     "relvol": 10.564428701765685
+    },
+    {
+     "sym": "DDOG",
+     "relvol": 6.520846391596603
+    },
+    {
+     "sym": "ENPH",
+     "relvol": 5.494473519633981
+    }
+   ]
   }
  }
 }
