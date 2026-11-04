@@ -211,3 +211,11 @@
 - Trades exécutés : 1
   - ORCL : achat 123.19 à 09:42:28 → sortie 126.26 à 15:55:47 = **+3.70 R**
 - Résultat du jour : +0.23 $ → capital du bot : **49.74 $** (EN VIE)
+
+## Wednesday 04 November 2026
+- Top 5 à 09:37:44 NY : CVS (16.2x), RIOT (11.8x), FSLR (10.6x), DDOG (6.5x), ENPH (5.5x)
+- Achats possibles (bougie haussière) : FSLR, ENPH
+  - FSLR : cassure déjà faite → pas d'entrée (variante A)
+  - ENPH : cassure déjà faite → pas d'entrée (variante A)
+- Trades exécutés : 0
+- Résultat du jour : +0.00 $ → capital du bot : **49.74 $** (EN VIE)
