@@ -1278,6 +1278,59 @@
    ],
    "final": true,
    "pnl": 0.0
+  },
+  "2026-11-05": {
+   "picks": [
+    {
+     "sym": "QCOM",
+     "trigger": 157.2,
+     "stopdist": 0.7434,
+     "relvol": 13.33,
+     "atr": 7.434,
+     "slippage_exit": true,
+     "stop_placed": true
+    },
+    {
+     "sym": "HD",
+     "trigger": 362.23,
+     "stopdist": 0.9061,
+     "relvol": 7.31,
+     "atr": 9.061
+    },
+    {
+     "sym": "ARM",
+     "trigger": 175.19,
+     "stopdist": 1.3377,
+     "relvol": 5.61,
+     "atr": 13.377,
+     "stop_placed": true
+    }
+   ],
+   "equity_start": 49.7441,
+   "selected": true,
+   "selected_at": "09:38:08",
+   "top5": [
+    {
+     "sym": "U",
+     "relvol": 19.050019066988686
+    },
+    {
+     "sym": "QCOM",
+     "relvol": 13.329493360553393
+    },
+    {
+     "sym": "HD",
+     "relvol": 7.307012394545728
+    },
+    {
+     "sym": "FCX",
+     "relvol": 6.18882843386699
+    },
+    {
+     "sym": "ARM",
+     "relvol": 5.608005007358787
+    }
+   ]
   }
  }
 }
