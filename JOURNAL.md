@@ -219,3 +219,11 @@
   - ENPH : cassure déjà faite → pas d'entrée (variante A)
 - Trades exécutés : 0
 - Résultat du jour : +0.00 $ → capital du bot : **49.74 $** (EN VIE)
+
+## Thursday 05 November 2026
+- Top 5 à 09:38:08 NY : U (19.1x), QCOM (13.3x), HD (7.3x), FCX (6.2x), ARM (5.6x)
+- Achats possibles (bougie haussière) : QCOM, HD, ARM
+  - QCOM : glissement > 0.3 R → refermé immédiatement (variante A, hors statistiques)
+- Trades exécutés : 1
+  - ARM : achat 175.48 à 09:46:06 → sortie 173.85 à 09:47:21 = **-1.22 R**
+- Résultat du jour : -0.10 $ → capital du bot : **49.65 $** (EN VIE)
