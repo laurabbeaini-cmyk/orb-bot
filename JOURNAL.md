@@ -227,3 +227,11 @@
 - Trades exécutés : 1
   - ARM : achat 175.48 à 09:46:06 → sortie 173.85 à 09:47:21 = **-1.22 R**
 - Résultat du jour : -0.10 $ → capital du bot : **49.65 $** (EN VIE)
+
+## Friday 06 November 2026
+- Top 5 à 09:37:23 NY : ABNB (12.3x), AFRM (6.8x), NET (6.8x), MCD (4.8x), CAT (4.5x)
+- Achats possibles (bougie haussière) : AFRM, MCD
+  - AFRM : glissement > 0.3 R → refermé immédiatement (variante A, hors statistiques)
+  - MCD : glissement > 0.3 R → refermé immédiatement (variante A, hors statistiques)
+- Trades exécutés : 0
+- Résultat du jour : -0.08 $ → capital du bot : **49.57 $** (EN VIE)
