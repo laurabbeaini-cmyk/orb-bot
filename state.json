@@ -1382,6 +1382,51 @@
    ],
    "final": true,
    "pnl": -0.0803
+  },
+  "2026-11-09": {
+   "picks": [
+    {
+     "sym": "NVDA",
+     "trigger": 175.19,
+     "stopdist": 0.8019,
+     "relvol": 11.07,
+     "atr": 8.019,
+     "stop_placed": true
+    },
+    {
+     "sym": "LRCX",
+     "trigger": 206.93,
+     "stopdist": 1.6823,
+     "relvol": 3.36,
+     "atr": 16.823,
+     "gap_skipped": true
+    }
+   ],
+   "equity_start": 49.5657,
+   "selected": true,
+   "selected_at": "09:36:41",
+   "top5": [
+    {
+     "sym": "NVDA",
+     "relvol": 11.070567103263818
+    },
+    {
+     "sym": "C",
+     "relvol": 3.824999744420704
+    },
+    {
+     "sym": "LRCX",
+     "relvol": 3.362822154544055
+    },
+    {
+     "sym": "LOW",
+     "relvol": 3.04652358909618
+    },
+    {
+     "sym": "AMD",
+     "relvol": 2.8146497095329397
+    }
+   ]
   }
  }
 }
