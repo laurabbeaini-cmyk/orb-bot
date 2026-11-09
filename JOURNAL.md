@@ -235,3 +235,11 @@
   - MCD : glissement > 0.3 R → refermé immédiatement (variante A, hors statistiques)
 - Trades exécutés : 0
 - Résultat du jour : -0.08 $ → capital du bot : **49.57 $** (EN VIE)
+
+## Monday 09 November 2026
+- Top 5 à 09:36:41 NY : NVDA (11.1x), C (3.8x), LRCX (3.4x), LOW (3.0x), AMD (2.8x)
+- Achats possibles (bougie haussière) : NVDA, LRCX
+  - LRCX : cassure déjà faite → pas d'entrée (variante A)
+- Trades exécutés : 1
+  - NVDA : achat 175.25 à 09:40:48 → sortie 174.44 à 11:32:41 = **-1.01 R**
+- Résultat du jour : -0.05 $ → capital du bot : **49.52 $** (EN VIE)
