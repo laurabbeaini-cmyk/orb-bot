@@ -69,3 +69,4 @@ date,sym,triggered,trigger,entry,exit,t_entry,t_exit,stopdist,R,stopped,stopped_
 2026-11-06,MCD,True,271.69,271.98,271.5,09:48:08,09:48:12,0.617,,False,False,0.47,0.03651,-0.0175,"glissement excessif (variante A), hors statistiques",False,A
 2026-11-09,NVDA,True,175.19,175.25,174.44,09:40:48,11:32:41,0.8019,-1.01,True,False,0.075,0.05657,-0.0458,,False,A
 2026-11-09,LRCX,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
+2026-11-10,CAT,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
