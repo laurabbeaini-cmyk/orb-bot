@@ -70,3 +70,6 @@ date,sym,triggered,trigger,entry,exit,t_entry,t_exit,stopdist,R,stopped,stopped_
 2026-11-09,NVDA,True,175.19,175.25,174.44,09:40:48,11:32:41,0.8019,-1.01,True,False,0.075,0.05657,-0.0458,,False,A
 2026-11-09,LRCX,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
 2026-11-10,CAT,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
+2026-11-11,ZM,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
+2026-11-11,COST,False,,,,,,,,,,,,,,,A
+2026-11-11,AVGO,True,354.37,354.39,352.65,11:46:23,13:39:05,1.7286,-1.007,True,False,0.012,0.02795,-0.0486,,False,A

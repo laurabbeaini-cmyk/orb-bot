@@ -1,5 +1,5 @@
 {
- "equity": 49.5199,
+ "equity": 49.4713,
  "alive": true,
  "started": "2026-09-29",
  "days": {
@@ -1519,7 +1519,9 @@
      "sym": "DDOG",
      "relvol": 2.2806796863986816
     }
-   ]
+   ],
+   "final": true,
+   "pnl": -0.0486
   }
  }
 }

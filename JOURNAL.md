@@ -250,3 +250,11 @@
   - CAT : cassure déjà faite → pas d'entrée (variante A)
 - Trades exécutés : 0
 - Résultat du jour : +0.00 $ → capital du bot : **49.52 $** (EN VIE)
+
+## Wednesday 11 November 2026
+- Top 5 à 09:37:23 NY : ZM (3.1x), COST (2.7x), AVGO (2.6x), GS (2.5x), DDOG (2.3x)
+- Achats possibles (bougie haussière) : ZM, COST, AVGO
+  - ZM : cassure déjà faite → pas d'entrée (variante A)
+- Trades exécutés : 1
+  - AVGO : achat 354.39 à 11:46:23 → sortie 352.65 à 13:39:05 = **-1.01 R**
+- Résultat du jour : -0.05 $ → capital du bot : **49.47 $** (EN VIE)
