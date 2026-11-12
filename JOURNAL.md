@@ -258,3 +258,12 @@
 - Trades exécutés : 1
   - AVGO : achat 354.39 à 11:46:23 → sortie 352.65 à 13:39:05 = **-1.01 R**
 - Résultat du jour : -0.05 $ → capital du bot : **49.47 $** (EN VIE)
+
+## Thursday 12 November 2026
+- Top 5 à 09:37:27 NY : NVDA (6.1x), AVGO (4.1x), AMD (3.0x), SMCI (2.6x), OXY (2.3x)
+- Achats possibles (bougie haussière) : NVDA, AVGO, SMCI
+  - NVDA : cassure déjà faite → pas d'entrée (variante A)
+  - AVGO : cassure déjà faite → pas d'entrée (variante A)
+  - SMCI : cassure déjà faite → pas d'entrée (variante A)
+- Trades exécutés : 0
+- Résultat du jour : +0.00 $ → capital du bot : **49.47 $** (EN VIE)
