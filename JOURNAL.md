@@ -267,3 +267,10 @@
   - SMCI : cassure déjà faite → pas d'entrée (variante A)
 - Trades exécutés : 0
 - Résultat du jour : +0.00 $ → capital du bot : **49.47 $** (EN VIE)
+
+## Friday 13 November 2026
+- Top 5 à 09:36:03 NY : LOW (3.2x), SCHW (3.0x), AMAT (1.9x), ENPH (1.8x), NFLX (1.3x)
+- Achats possibles (bougie haussière) : NFLX
+  - NFLX : cassure déjà faite → pas d'entrée (variante A)
+- Trades exécutés : 0
+- Résultat du jour : +0.00 $ → capital du bot : **49.47 $** (EN VIE)

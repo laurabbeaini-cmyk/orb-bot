@@ -1,10 +1,10 @@
-# 🤖 Bot de survie ORB — état au 12/11/2026 21:55 (Paris)
+# 🤖 Bot de survie ORB — état au 13/11/2026 21:55 (Paris)
 
 | | |
 |---|---|
 | Capital du bot (départ 50 $) | **49.47 $** |
 | Statut | ✅ EN VIE |
-| Jours de test | 30 |
+| Jours de test | 31 |
 | Trades exécutés | 35 |
 | Gagnants | 9 % |
 | R moyen réel | -0.248 |
