@@ -77,3 +77,6 @@ date,sym,triggered,trigger,entry,exit,t_entry,t_exit,stopdist,R,stopped,stopped_
 2026-11-12,AVGO,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
 2026-11-12,SMCI,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
 2026-11-13,NFLX,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
+2026-11-16,COST,False,,,,,,,,,,,,,,,A
+2026-11-16,MSTR,True,105.5,105.63,104.65,09:37:24,09:38:01,0.8465,-1.158,True,False,0.154,0.09367,-0.0918,,True,A
+2026-11-16,COIN,True,121.59,121.74,120.61,09:50:20,10:00:35,0.9435,-1.198,True,False,0.159,0.08127,-0.0918,,False,A

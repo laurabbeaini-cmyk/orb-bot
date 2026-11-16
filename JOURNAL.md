@@ -274,3 +274,11 @@
   - NFLX : cassure déjà faite → pas d'entrée (variante A)
 - Trades exécutés : 0
 - Résultat du jour : +0.00 $ → capital du bot : **49.47 $** (EN VIE)
+
+## Monday 16 November 2026
+- Top 5 à 09:35:33 NY : DE (7.6x), COST (3.6x), LYFT (2.3x), MSTR (2.2x), COIN (1.9x)
+- Achats possibles (bougie haussière) : COST, MSTR, COIN
+- Trades exécutés : 2
+  - MSTR : achat 105.63 à 09:37:24 → sortie 104.65 à 09:38:01 = **-1.16 R**
+  - COIN : achat 121.74 à 09:50:20 → sortie 120.61 à 10:00:35 = **-1.20 R**
+- Résultat du jour : -0.18 $ → capital du bot : **49.29 $** (EN VIE)
