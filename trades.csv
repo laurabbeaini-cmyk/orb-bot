@@ -80,3 +80,7 @@ date,sym,triggered,trigger,entry,exit,t_entry,t_exit,stopdist,R,stopped,stopped_
 2026-11-16,COST,False,,,,,,,,,,,,,,,A
 2026-11-16,MSTR,True,105.5,105.63,104.65,09:37:24,09:38:01,0.8465,-1.158,True,False,0.154,0.09367,-0.0918,,True,A
 2026-11-16,COIN,True,121.59,121.74,120.61,09:50:20,10:00:35,0.9435,-1.198,True,False,0.159,0.08127,-0.0918,,False,A
+2026-11-17,DIS,True,120.69,120.77,120.74,09:51:03,09:51:15,0.2592,,False,False,0.309,0.08162,-0.0024,"glissement excessif (variante A), hors statistiques",False,A
+2026-11-17,LOW,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
+2026-11-17,CCL,True,29.0,29.02,28.89,09:46:46,09:49:05,0.1166,-1.115,True,False,0.172,0.33968,-0.0442,,False,A
+2026-11-17,NKE,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A

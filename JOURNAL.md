@@ -282,3 +282,13 @@
   - MSTR : achat 105.63 à 09:37:24 → sortie 104.65 à 09:38:01 = **-1.16 R**
   - COIN : achat 121.74 à 09:50:20 → sortie 120.61 à 10:00:35 = **-1.20 R**
 - Résultat du jour : -0.18 $ → capital du bot : **49.29 $** (EN VIE)
+
+## Tuesday 17 November 2026
+- Top 5 à 09:35:39 NY : DIS (6.0x), LOW (3.9x), CCL (3.5x), NKE (3.2x), JPM (3.1x)
+- Achats possibles (bougie haussière) : DIS, LOW, CCL, NKE
+  - DIS : glissement > 0.3 R → refermé immédiatement (variante A, hors statistiques)
+  - LOW : cassure déjà faite → pas d'entrée (variante A)
+  - NKE : cassure déjà faite → pas d'entrée (variante A)
+- Trades exécutés : 1
+  - CCL : achat 29.02 à 09:46:46 → sortie 28.89 à 09:49:05 = **-1.11 R**
+- Résultat du jour : -0.05 $ → capital du bot : **49.24 $** (EN VIE)
