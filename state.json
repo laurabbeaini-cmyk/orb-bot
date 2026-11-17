@@ -1670,6 +1670,68 @@
    ],
    "final": true,
    "pnl": -0.1836
+  },
+  "2026-11-17": {
+   "picks": [
+    {
+     "sym": "DIS",
+     "trigger": 120.69,
+     "stopdist": 0.2592,
+     "relvol": 6.04,
+     "atr": 2.592,
+     "slippage_exit": true,
+     "stop_placed": true
+    },
+    {
+     "sym": "LOW",
+     "trigger": 223.75,
+     "stopdist": 0.715,
+     "relvol": 3.9,
+     "atr": 7.15,
+     "gap_skipped": true
+    },
+    {
+     "sym": "CCL",
+     "trigger": 29.0,
+     "stopdist": 0.1166,
+     "relvol": 3.5,
+     "atr": 1.166,
+     "stop_placed": true
+    },
+    {
+     "sym": "NKE",
+     "trigger": 40.49,
+     "stopdist": 0.1267,
+     "relvol": 3.22,
+     "atr": 1.267,
+     "gap_skipped": true
+    }
+   ],
+   "equity_start": 49.2877,
+   "selected": true,
+   "selected_at": "09:35:39",
+   "top5": [
+    {
+     "sym": "DIS",
+     "relvol": 6.0365851508366095
+    },
+    {
+     "sym": "LOW",
+     "relvol": 3.896476625197649
+    },
+    {
+     "sym": "CCL",
+     "relvol": 3.4957558461651037
+    },
+    {
+     "sym": "NKE",
+     "relvol": 3.2231383434861876
+    },
+    {
+     "sym": "JPM",
+     "relvol": 3.1210359241914696
+    }
+   ]
   }
  }
 }
