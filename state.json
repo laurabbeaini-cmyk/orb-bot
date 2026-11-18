@@ -1734,6 +1734,77 @@
    ],
    "final": true,
    "pnl": -0.0466
+  },
+  "2026-11-18": {
+   "picks": [
+    {
+     "sym": "LOW",
+     "trigger": 216.52,
+     "stopdist": 0.7329,
+     "relvol": 8.84,
+     "atr": 7.329,
+     "gap_skipped": true
+    },
+    {
+     "sym": "TGT",
+     "trigger": 165.68,
+     "stopdist": 0.5442,
+     "relvol": 6.52,
+     "atr": 5.442,
+     "slippage_exit": true,
+     "stop_placed": true
+    },
+    {
+     "sym": "DASH",
+     "trigger": 166.0,
+     "stopdist": 1.0198,
+     "relvol": 2.68,
+     "atr": 10.198,
+     "gap_skipped": true
+    },
+    {
+     "sym": "NKE",
+     "trigger": 35.62,
+     "stopdist": 0.1592,
+     "relvol": 2.67,
+     "atr": 1.592,
+     "slippage_exit": true,
+     "stop_placed": true
+    },
+    {
+     "sym": "GM",
+     "trigger": 84.58,
+     "stopdist": 0.3008,
+     "relvol": 2.47,
+     "atr": 3.008,
+     "stop_placed": true
+    }
+   ],
+   "equity_start": 49.2411,
+   "selected": true,
+   "selected_at": "09:35:43",
+   "top5": [
+    {
+     "sym": "LOW",
+     "relvol": 8.84158799322198
+    },
+    {
+     "sym": "TGT",
+     "relvol": 6.515342455538571
+    },
+    {
+     "sym": "DASH",
+     "relvol": 2.6834470558503916
+    },
+    {
+     "sym": "NKE",
+     "relvol": 2.667133421329528
+    },
+    {
+     "sym": "GM",
+     "relvol": 2.466934611222755
+    }
+   ]
   }
  }
 }
