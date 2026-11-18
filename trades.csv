@@ -84,3 +84,8 @@ date,sym,triggered,trigger,entry,exit,t_entry,t_exit,stopdist,R,stopped,stopped_
 2026-11-17,LOW,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
 2026-11-17,CCL,True,29.0,29.02,28.89,09:46:46,09:49:05,0.1166,-1.115,True,False,0.172,0.33968,-0.0442,,False,A
 2026-11-17,NKE,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
+2026-11-18,LOW,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
+2026-11-18,TGT,True,165.68,165.86,166.06,09:35:58,09:36:08,0.5442,,False,False,0.331,0.05938,0.0119,"glissement excessif (variante A), hors statistiques",False,A
+2026-11-18,DASH,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
+2026-11-18,NKE,True,35.62,35.71,35.79,09:35:52,09:36:01,0.1592,,False,False,0.565,0.27578,0.0221,"glissement excessif (variante A), hors statistiques",False,A
+2026-11-18,GM,True,84.58,84.66,84.31,09:36:04,09:48:29,0.3008,-1.164,True,False,0.266,0.11633,-0.0407,,False,A

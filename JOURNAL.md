@@ -292,3 +292,14 @@
 - Trades exécutés : 1
   - CCL : achat 29.02 à 09:46:46 → sortie 28.89 à 09:49:05 = **-1.11 R**
 - Résultat du jour : -0.05 $ → capital du bot : **49.24 $** (EN VIE)
+
+## Wednesday 18 November 2026
+- Top 5 à 09:35:43 NY : LOW (8.8x), TGT (6.5x), DASH (2.7x), NKE (2.7x), GM (2.5x)
+- Achats possibles (bougie haussière) : LOW, TGT, DASH, NKE, GM
+  - LOW : cassure déjà faite → pas d'entrée (variante A)
+  - TGT : glissement > 0.3 R → refermé immédiatement (variante A, hors statistiques)
+  - DASH : cassure déjà faite → pas d'entrée (variante A)
+  - NKE : glissement > 0.3 R → refermé immédiatement (variante A, hors statistiques)
+- Trades exécutés : 1
+  - GM : achat 84.66 à 09:36:04 → sortie 84.31 à 09:48:29 = **-1.16 R**
+- Résultat du jour : -0.01 $ → capital du bot : **49.23 $** (EN VIE)
