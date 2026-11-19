@@ -1807,6 +1807,67 @@
    ],
    "final": true,
    "pnl": -0.0068
+  },
+  "2026-11-19": {
+   "picks": [
+    {
+     "sym": "SNOW",
+     "trigger": 295.42,
+     "stopdist": 1.6699,
+     "relvol": 4.47,
+     "atr": 16.699,
+     "slippage_exit": true,
+     "stop_placed": true
+    },
+    {
+     "sym": "WMT",
+     "trigger": 125.3,
+     "stopdist": 0.3085,
+     "relvol": 3.56,
+     "atr": 3.085,
+     "stop_placed": true
+    },
+    {
+     "sym": "ZS",
+     "trigger": 213.46,
+     "stopdist": 1.2335,
+     "relvol": 3.39,
+     "atr": 12.335,
+     "gap_skipped": true
+    },
+    {
+     "sym": "PANW",
+     "trigger": 370.0,
+     "stopdist": 2.0198,
+     "relvol": 3.14,
+     "atr": 20.198
+    }
+   ],
+   "equity_start": 49.2343,
+   "selected": true,
+   "selected_at": "09:35:35",
+   "top5": [
+    {
+     "sym": "SNOW",
+     "relvol": 4.469609629974992
+    },
+    {
+     "sym": "WMT",
+     "relvol": 3.5566510688845123
+    },
+    {
+     "sym": "ZS",
+     "relvol": 3.3870668316831685
+    },
+    {
+     "sym": "PANW",
+     "relvol": 3.1444290856337336
+    },
+    {
+     "sym": "MCD",
+     "relvol": 2.7932946508274394
+    }
+   ]
   }
  }
 }
