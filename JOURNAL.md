@@ -303,3 +303,12 @@
 - Trades exécutés : 1
   - GM : achat 84.66 à 09:36:04 → sortie 84.31 à 09:48:29 = **-1.16 R**
 - Résultat du jour : -0.01 $ → capital du bot : **49.23 $** (EN VIE)
+
+## Thursday 19 November 2026
+- Top 5 à 09:35:35 NY : SNOW (4.5x), WMT (3.6x), ZS (3.4x), PANW (3.1x), MCD (2.8x)
+- Achats possibles (bougie haussière) : SNOW, WMT, ZS, PANW
+  - SNOW : glissement > 0.3 R → refermé immédiatement (variante A, hors statistiques)
+  - ZS : cassure déjà faite → pas d'entrée (variante A)
+- Trades exécutés : 1
+  - WMT : achat 125.35 à 09:49:23 → sortie 124.97 à 09:50:13 = **-1.23 R**
+- Résultat du jour : -0.07 $ → capital du bot : **49.17 $** (EN VIE)
