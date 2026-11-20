@@ -93,3 +93,5 @@ date,sym,triggered,trigger,entry,exit,t_entry,t_exit,stopdist,R,stopped,stopped_
 2026-11-19,WMT,True,125.3,125.35,124.97,09:49:23,09:50:13,0.3085,-1.232,True,False,0.162,0.07855,-0.0299,,True,A
 2026-11-19,ZS,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
 2026-11-19,PANW,False,,,,,,,,,,,,,,,A
+2026-11-20,DIS,True,121.94,122.0,121.63,09:36:17,09:38:32,0.3341,-1.107,True,False,0.18,0.0806,-0.0298,,False,A
+2026-11-20,NFLX,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A

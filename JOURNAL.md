@@ -312,3 +312,11 @@
 - Trades exécutés : 1
   - WMT : achat 125.35 à 09:49:23 → sortie 124.97 à 09:50:13 = **-1.23 R**
 - Résultat du jour : -0.07 $ → capital du bot : **49.17 $** (EN VIE)
+
+## Friday 20 November 2026
+- Top 5 à 09:35:35 NY : MS (6.6x), DIS (3.5x), C (3.5x), HOOD (3.4x), NFLX (3.2x)
+- Achats possibles (bougie haussière) : DIS, NFLX
+  - NFLX : cassure déjà faite → pas d'entrée (variante A)
+- Trades exécutés : 1
+  - DIS : achat 122.0 à 09:36:17 → sortie 121.63 à 09:38:32 = **-1.11 R**
+- Résultat du jour : -0.03 $ → capital du bot : **49.14 $** (EN VIE)

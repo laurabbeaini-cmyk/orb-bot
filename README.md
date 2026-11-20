@@ -1,17 +1,17 @@
-# 🤖 Bot de survie ORB — état au 19/11/2026 21:55 (Paris)
+# 🤖 Bot de survie ORB — état au 20/11/2026 21:55 (Paris)
 
 | | |
 |---|---|
-| Capital du bot (départ 50 $) | **49.17 $** |
+| Capital du bot (départ 50 $) | **49.14 $** |
 | Statut | ✅ EN VIE |
-| Jours de test | 35 |
-| Trades exécutés | 40 |
-| Gagnants | 8 % |
-| R moyen réel | -0.363 |
+| Jours de test | 36 |
+| Trades exécutés | 41 |
+| Gagnants | 7 % |
+| R moyen réel | -0.382 |
 | **Stoppés dans la minute d'entrée** | **12 %** (même minute d'horloge ; backtest : 13 % optimiste / 47 % pessimiste) |
 | Sorties en moins de 60 s | 32 % |
-| Glissement moyen à l'entrée | +0.423 R |
-| Variante A (depuis le 20/10) | 18 trades, R moyen +0.211, 11 entrée(s) refermée(s) pour glissement excessif |
+| Glissement moyen à l'entrée | +0.417 R |
+| Variante A (depuis le 20/10) | 19 trades, R moyen +0.142, 11 entrée(s) refermée(s) pour glissement excessif |
 
 Le test porte sur 2 semaines : trop peu de trades pour juger la rentabilité,
 mais assez pour savoir si le % « stoppés dans la minute d'entrée » est proche de 13 % ou de 47 %.
