@@ -320,3 +320,10 @@
 - Trades exécutés : 1
   - DIS : achat 122.0 à 09:36:17 → sortie 121.63 à 09:38:32 = **-1.11 R**
 - Résultat du jour : -0.03 $ → capital du bot : **49.14 $** (EN VIE)
+
+## Monday 23 November 2026
+- Top 5 à 09:35:34 NY : ZS (13.3x), UNH (5.1x), CRWD (4.9x), GE (4.0x), GS (3.5x)
+- Achats possibles (bougie haussière) : UNH
+- Trades exécutés : 1
+  - UNH : achat 330.5 à 09:59:46 → sortie 328.79 à 10:46:41 = **-1.06 R**
+- Résultat du jour : -0.05 $ → capital du bot : **49.09 $** (EN VIE)
