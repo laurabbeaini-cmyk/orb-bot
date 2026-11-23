@@ -1917,6 +1917,43 @@
    ],
    "final": true,
    "pnl": -0.0298
+  },
+  "2026-11-23": {
+   "picks": [
+    {
+     "sym": "UNH",
+     "trigger": 330.21,
+     "stopdist": 1.6098,
+     "relvol": 5.07,
+     "atr": 16.098,
+     "stop_placed": true
+    }
+   ],
+   "equity_start": 49.1367,
+   "selected": true,
+   "selected_at": "09:35:34",
+   "top5": [
+    {
+     "sym": "ZS",
+     "relvol": 13.34052557860335
+    },
+    {
+     "sym": "UNH",
+     "relvol": 5.070643520136705
+    },
+    {
+     "sym": "CRWD",
+     "relvol": 4.937458046230902
+    },
+    {
+     "sym": "GE",
+     "relvol": 3.9522286628023187
+    },
+    {
+     "sym": "GS",
+     "relvol": 3.4555922398974053
+    }
+   ]
   }
  }
 }
