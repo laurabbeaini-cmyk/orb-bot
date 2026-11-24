@@ -327,3 +327,12 @@
 - Trades exécutés : 1
   - UNH : achat 330.5 à 09:59:46 → sortie 328.79 à 10:46:41 = **-1.06 R**
 - Résultat du jour : -0.05 $ → capital du bot : **49.09 $** (EN VIE)
+
+## Tuesday 24 November 2026
+- Top 5 à 09:35:36 NY : PINS (13.3x), GILD (4.7x), ZM (2.4x), DE (2.3x), SPOT (2.1x)
+- Achats possibles (bougie haussière) : PINS, GILD, ZM
+  - PINS : cassure déjà faite → pas d'entrée (variante A)
+  - GILD : cassure déjà faite → pas d'entrée (variante A)
+- Trades exécutés : 1
+  - ZM : achat 89.6 à 09:37:09 → sortie 89.0 à 09:54:09 = **-1.24 R**
+- Résultat du jour : -0.07 $ → capital du bot : **49.02 $** (EN VIE)

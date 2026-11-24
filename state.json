@@ -1,5 +1,5 @@
 {
- "equity": 49.0859,
+ "equity": 49.0202,
  "alive": true,
  "started": "2026-09-29",
  "days": {
@@ -2008,7 +2008,9 @@
      "sym": "SPOT",
      "relvol": 2.135158080619418
     }
-   ]
+   ],
+   "final": true,
+   "pnl": -0.0657
   }
  }
 }
