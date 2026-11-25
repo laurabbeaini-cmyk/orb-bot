@@ -99,3 +99,6 @@ date,sym,triggered,trigger,entry,exit,t_entry,t_exit,stopdist,R,stopped,stopped_
 2026-11-24,PINS,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
 2026-11-24,GILD,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
 2026-11-24,ZM,True,89.54,89.6,89.0,09:37:09,09:54:09,0.4833,-1.241,True,False,0.124,0.10957,-0.0657,,False,A
+2026-11-25,DE,False,,,,,,,,,,,,,"gap, pas d'entrée (variante A)",,A
+2026-11-25,CVX,True,209.71,209.83,209.46,09:37:11,09:37:27,0.4718,-0.784,True,True,0.254,0.04672,-0.0173,,True,A
+2026-11-25,BAC,True,47.45,47.45,48.65,09:37:34,15:55:50,0.1249,9.608,False,False,0.0,0.20662,0.2479,,False,A

@@ -336,3 +336,12 @@
 - Trades exécutés : 1
   - ZM : achat 89.6 à 09:37:09 → sortie 89.0 à 09:54:09 = **-1.24 R**
 - Résultat du jour : -0.07 $ → capital du bot : **49.02 $** (EN VIE)
+
+## Wednesday 25 November 2026
+- Top 5 à 09:35:47 NY : DE (5.5x), MSTR (5.0x), CVX (4.5x), BAC (3.4x), MARA (3.1x)
+- Achats possibles (bougie haussière) : DE, CVX, BAC
+  - DE : cassure déjà faite → pas d'entrée (variante A)
+- Trades exécutés : 2
+  - CVX : achat 209.83 à 09:37:11 → sortie 209.46 à 09:37:27 = **-0.78 R** (stoppé dans la minute d’entrée)
+  - BAC : achat 47.45 à 09:37:34 → sortie 48.65 à 15:55:50 = **+9.61 R**
+- Résultat du jour : +0.23 $ → capital du bot : **49.25 $** (EN VIE)

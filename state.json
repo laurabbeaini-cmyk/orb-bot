@@ -1,5 +1,5 @@
 {
- "equity": 49.0202,
+ "equity": 49.2509,
  "alive": true,
  "started": "2026-09-29",
  "days": {
@@ -2063,7 +2063,9 @@
      "sym": "MARA",
      "relvol": 3.145332701550125
     }
-   ]
+   ],
+   "final": true,
+   "pnl": 0.2307
   }
  }
 }
