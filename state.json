@@ -2066,6 +2066,43 @@
    ],
    "final": true,
    "pnl": 0.2307
+  },
+  "2026-11-27": {
+   "picks": [
+    {
+     "sym": "SHOP",
+     "trigger": 142.03,
+     "stopdist": 0.8166,
+     "relvol": 2.59,
+     "atr": 8.166,
+     "stop_placed": true
+    }
+   ],
+   "equity_start": 49.2509,
+   "selected": true,
+   "selected_at": "09:35:32",
+   "top5": [
+    {
+     "sym": "ENPH",
+     "relvol": 16.1995733776949
+    },
+    {
+     "sym": "ABBV",
+     "relvol": 4.647686010854643
+    },
+    {
+     "sym": "SHOP",
+     "relvol": 2.5915900486749592
+    },
+    {
+     "sym": "MSTR",
+     "relvol": 2.025520561452352
+    },
+    {
+     "sym": "GM",
+     "relvol": 1.9790864543227162
+    }
+   ]
   }
  }
 }
