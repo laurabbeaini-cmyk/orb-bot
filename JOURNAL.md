@@ -345,3 +345,10 @@
   - CVX : achat 209.83 à 09:37:11 → sortie 209.46 à 09:37:27 = **-0.78 R** (stoppé dans la minute d’entrée)
   - BAC : achat 47.45 à 09:37:34 → sortie 48.65 à 15:55:50 = **+9.61 R**
 - Résultat du jour : +0.23 $ → capital du bot : **49.25 $** (EN VIE)
+
+## Friday 27 November 2026
+- Top 5 à 09:35:32 NY : ENPH (16.2x), ABBV (4.6x), SHOP (2.6x), MSTR (2.0x), GM (2.0x)
+- Achats possibles (bougie haussière) : SHOP
+- Trades exécutés : 1
+  - SHOP : achat 142.06 à 10:37:27 → sortie 141.1 à 11:17:47 = **-1.18 R**
+- Résultat du jour : -0.07 $ → capital du bot : **49.18 $** (EN VIE)
